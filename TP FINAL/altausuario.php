@@ -67,7 +67,7 @@
                 
 				include("conexion.inc");
 				$vSql = "SELECT Count(usuario) FROM clientes WHERE usuario='$usuario'";		
-                $vResultado = mysqli_query($link,$vSql) or die (mysql_error());		
+                $vResultado = mysqli_query($link,$vSql) or die (mysqli_error($link));		
                 $vCantUsuarios = mysqli_fetch_row($vResultado);	
                 if ($vCantUsuarios[0] != 0){
                  echo ("<h3>El usuario ya existe<br></h3>");
