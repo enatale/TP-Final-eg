@@ -33,14 +33,21 @@
           </ul>
           <ul class="nav navbar-nav navbar-right">
           	<li><a href="index.html">Inicio</a></li>
-            <li class="active"><a href="galeria.php">Galería</a></li>
-			<li class="dropdown">
-              <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Reservas <span class="caret"></span></a>
-              <ul class="dropdown-menu">
-                <li><a href="reserva.php">Reservar instalaciones</a></li>
-                <li><a href="misreservas.php">Mis reservas</a></li>
-              </ul>
-            </li>
+            <li><a href="galeria.php">Galería</a></li>
+			  <?php if(isset($_SESSION['usuario'])){ ?>
+                    <li class="dropdown">
+							  <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Reservas <span class="caret"></span></a>
+							  <ul class="dropdown-menu">
+								<li><a href="reserva.php">Reservar instalaciones</a></li>
+								<li><a href="misreservas.php">Mis reservas</a></li>
+              				  </ul>
+                    </li> 
+            		
+					<?php } else{ ?>
+            		
+					<li><a href="disponibilidad.php">Ver disponibilidad</a></li>
+             <?php } ?>
+	   
             <li><a href="ubicacion.php">Ubicación</a></li>
             <li><a href="nuestracomision.php">Nuestra comisión</a></li>
             <li><a href="contacto.php">Contacto</a></li>
@@ -48,6 +55,9 @@
             		<li><a href="cerrarsesion.php">Cerrar sesión</a></li>
             		<?php } else{ ?>
             		<li><a href="iniciarsesion.php">Inciar sesión</a></li>
+             <?php } ?>
+			   <?php if(isset($_SESSION['usuario']) and $_SESSION['usuario']=='administrador'){ ?>
+                    <li><a href="administrador.php">Panel administrador</a></li>
              <?php } ?>
           </ul>
         </div>
@@ -75,7 +85,7 @@
 							$_SESSION['apellido'] = $fila['apellido'];
 							mysqli_free_result($resultado);
 							mysqli_close($link);
-							header('Location: galeria.php');
+							header('Location: reserva.php');
 						}
 						else{
 							echo("<h3> Usuario y/o contraseña incorrecto/s </h3><br />");

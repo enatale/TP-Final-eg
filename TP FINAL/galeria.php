@@ -38,14 +38,20 @@
             <li class="active"><a href="">Galería</a></li>
             
             
-            <li class="dropdown">
-              <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Reservas <span class="caret"></span></a>
-              <ul class="dropdown-menu">
-                <li><a href="reserva.php">Reservar instalaciones</a></li>
-                <li><a href="misreservas.php">Mis reservas</a></li>
-              </ul>
-            </li>
-            
+           <?php if(isset($_SESSION['usuario'])){ ?>
+                    <li class="dropdown">
+							  <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Reservas <span class="caret"></span></a>
+							  <ul class="dropdown-menu">
+								<li><a href="reserva.php">Reservar instalaciones</a></li>
+								<li><a href="misreservas.php">Mis reservas</a></li>
+              				  </ul>
+                    </li> 
+            		
+					<?php } else{ ?>
+            		
+					<li><a href="disponibilidad.php">Ver disponibilidad</a></li>
+             <?php } ?>
+	   
             
             
             <li><a href="ubicacion.php">Ubicación</a></li>
@@ -57,6 +63,9 @@
             		<?php } else{ ?>
             		<li><a href="iniciarsesion.php">Inciar sesión</a></li>
              <?php } ?>
+			  <?php if(isset($_SESSION['usuario']) and $_SESSION['usuario']=='administrador'){ ?>
+                    <li><a href="administrador.php">Panel administrador</a></li>
+             <?php } ?>
           </ul>
         </div>
       </div>
@@ -64,8 +73,8 @@
         <div id="galeria" class="container">
             <div id="galeria_imagen"><img class="img-responsive" id="imgGaleria" src="imagenes/galeria/fachada1.jpg" /></div>
             <div id="galeria_miniaturas">
-                <img class="miniatura" onclick="javascript:document.getElementById('imgGaleria').src=this.src;" src="imagenes/galeria/fachada1.jpg" />
-                <img class="miniatura" onclick="javascript:document.getElementById('imgGaleria').src=this.src;" src="imagenes/galeria/fachada2.jpg" />
+                <img class="miniatura" onClick="javascript:document.getElementById('imgGaleria').src=this.src;" src="imagenes/galeria/fachada1.jpg" />
+                <img class="miniatura" onClick="javascript:document.getElementById('imgGaleria').src=this.src;" src="imagenes/galeria/fachada2.jpg" />
             </div>
         </div>
     
