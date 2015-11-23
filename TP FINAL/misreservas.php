@@ -72,25 +72,11 @@
       <div class="row row-centered">
           <div class="col-lg-6 col-centered">
 	
-	<form action="verdisponibilidad.php" method="post">
-            <h3>Ingrese la fecha que desea ver si nuestras instalaciones están disponibles</h3>
-            <label for="anio" class="sr-only">Año</label>
-            <input type="text" id="anio" name="anio" class="form-control" placeholder="Año" required autofocus>
-	        <label for="mes" class="sr-only">Mes</label>
-            <input type="text" id="mes" name="mes" class="form-control" placeholder="Mes" required>
-			<label for="dia" class="sr-only">Dia</label>
-            <input type="text" id="dia" name="dia" class="form-control" placeholder="Día" required>
-
-           
-
-            <button class="btn btn-lg btn-success btn-block" type="submit" style="margin-top:10px">Ver disponibilidad</button>
- 
-    </form>
-	     </div>
+		   
+		   
+		  </div>
 	  </div>
 	</div>
-	
-	
 	
     <footer class="footer navbar-fixed-bottom">
       <div class="container">

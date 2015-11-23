@@ -72,25 +72,45 @@
       <div class="row row-centered">
           <div class="col-lg-6 col-centered">
 	
-	<form action="verdisponibilidad.php" method="post">
-            <h3>Ingrese la fecha que desea ver si nuestras instalaciones están disponibles</h3>
-            <label for="anio" class="sr-only">Año</label>
-            <input type="text" id="anio" name="anio" class="form-control" placeholder="Año" required autofocus>
-	        <label for="mes" class="sr-only">Mes</label>
-            <input type="text" id="mes" name="mes" class="form-control" placeholder="Mes" required>
-			<label for="dia" class="sr-only">Dia</label>
-            <input type="text" id="dia" name="dia" class="form-control" placeholder="Día" required>
+		    <?php 
+			$anio= $_POST['anio'];
+			$mes = $_POST['mes'];
+			$dia = $_POST['dia'];
+			$fecha= $anio."-".$mes."-".$dia;
+			if($mes>'12' or $dia>'31' or ($dia>'30' and ($mes=='4' or $mes=='6' or $mes=='9' or $mes=='11')) or ($dia>'28' and $mes=='2')  or !is_numeric ($anio) or !is_numeric ($mes) or !is_numeric ($dia))
+			{
+			echo("<h3> Fecha no válida </h3><br />");
+			echo("<a href='disponibilidad.php'>Volver</a>");
+			}
+			else
+			{
+			
+			include('conexion.inc');
+						
+			$consulta = "Select * from reservas where dia = '$fecha' ";
+			$resultado = mysqli_query($link, $consulta) or die(mysqli_error($link));
+			$cantidad = mysqli_num_rows($resultado);
+			if($cantidad==1){
+		    		echo("<h3> Las instalaciones no están disponibles para dicha fecha </h3><br />");
+		         	echo("<a href='disponibilidad.php'>Volver</a>");
+					}
+				
+					else{
+					echo("<h3> Las instalaciones están disponibles para dicha fecha </h3><br />");
+		         	echo("<a href='disponibilidad.php'>Volver</a>");
+					}
+				
+				
+			mysqli_free_result($resultado);
+			mysqli_close($link);
+			}
 
-           
-
-            <button class="btn btn-lg btn-success btn-block" type="submit" style="margin-top:10px">Ver disponibilidad</button>
- 
-    </form>
-	     </div>
+			?>
+		   
+		   
+		  </div>
 	  </div>
 	</div>
-	
-	
 	
     <footer class="footer navbar-fixed-bottom">
       <div class="container">
