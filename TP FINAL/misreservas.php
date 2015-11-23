@@ -36,7 +36,7 @@
             <li><a href="galeria.php">Galería</a></li>        
 			          
 		    <?php if(isset($_SESSION['usuario'])){ ?>
-                    <li class="dropdown active">
+                    <li class="dropdown">
 							  <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Reservas <span class="caret"></span></a>
 							  <ul class="dropdown-menu">
 								<li><a href="reserva.php">Reservar instalaciones</a></li>
@@ -46,7 +46,7 @@
             		
 					<?php } else{ ?>
             		
-					<li><a href="disponibilidad.php">Ver disponibilidad</a></li>
+					<li class="active"><a href="disponibilidad.php">Ver disponibilidad</a></li>
              <?php } ?>
 	   
 		   
@@ -72,25 +72,11 @@
       <div class="row row-centered">
           <div class="col-lg-6 col-centered">
 	
-	<form action="hacerreserva.php" method="post">
-            <h3>Ingrese la fecha que desea reservar nuestras instalaciones</h3>
-            <label for="anio" class="sr-only">Año</label>
-            <input type="text" id="anio" name="anio" class="form-control" placeholder="Año" required autofocus>
-	        <label for="mes" class="sr-only">Mes</label>
-            <input type="text" id="mes" name="mes" class="form-control" placeholder="Mes" required>
-			<label for="dia" class="sr-only">Dia</label>
-            <input type="text" id="dia" name="dia" class="form-control" placeholder="Día" required>
-
-           
-
-            <button class="btn btn-lg btn-success btn-block" type="submit" style="margin-top:10px">Reservar</button>
- 
-    </form>
-	     </div>
+		   
+		   
+		  </div>
 	  </div>
 	</div>
-	
-	
 	
     <footer class="footer navbar-fixed-bottom">
       <div class="container">
