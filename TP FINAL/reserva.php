@@ -34,13 +34,22 @@
           <ul class="nav navbar-nav navbar-right">
           	<li><a href="index.html">Inicio</a></li>
             <li><a href="galeria.php">Galería</a></li>        
-            <li class="dropdown active">
-              <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Reservas <span class="caret"></span></a>
-              <ul class="dropdown-menu">
-                <li><a href="reserva.php">Reservar instalaciones</a></li>
-                <li><a href="misreservas.php">Mis reservas</a></li>
-              </ul>
-            </li>  
+			          
+		    <?php if(isset($_SESSION['usuario'])){ ?>
+                    <li class="dropdown active">
+							  <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Reservas <span class="caret"></span></a>
+							  <ul class="dropdown-menu">
+								<li><a href="reserva.php">Reservar instalaciones</a></li>
+								<li><a href="misreservas.php">Mis reservas</a></li>
+              				  </ul>
+                    </li> 
+            		
+					<?php } else{ ?>
+            		
+					<li><a href="disponibilidad.php">Ver disponibilidad</a></li>
+             <?php } ?>
+	   
+		   
             <li><a href="ubicacion.php">Ubicación</a></li>
             <li><a href="nuestracomision.php">Nuestra comisión</a></li>
             <li><a href="contacto.php">Contacto</a></li>
@@ -50,10 +59,19 @@
             		<?php } else{ ?>
             		<li><a href="iniciarsesion.php">Inciar sesión</a></li>
              <?php } ?>
+			 <?php if(isset($_SESSION['usuario']) and $_SESSION['usuario']=='administrador'){ ?>
+                    <li><a href="administrador.php">Panel administrador</a></li>
+             <?php } ?>
+			 
           </ul>
         </div>
       </div>
     </nav>
+	
+	
+	
+	
+	
     <footer class="footer navbar-fixed-bottom">
       <div class="container">
         <p class="text-muted">Sociedad Italiana de Pujato General Armando Díaz - Dirección: J.R. Rodríguez 448 - Pujato, Santa Fe, Argentina - Telefono: (03464)-494636</p>
