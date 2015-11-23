@@ -60,7 +60,13 @@
             		<li><a href="iniciarsesion.php">Inciar sesión</a></li>
              <?php } ?>
 			 <?php if(isset($_SESSION['usuario']) and $_SESSION['usuario']=='administrador'){ ?>
-                    <li><a href="administrador.php">Panel administrador</a></li>
+                    <li class="dropdown">
+							  <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Panel administrador <span class="caret"></span></a>
+							  <ul class="dropdown-menu">
+								<li><a href="gestionarusuarios.php">Gestionar usuarios</a></li>
+								<li><a href="gestionarreservas.php">Gestionar reservas</a></li>
+              				  </ul>
+                    </li>
              <?php } ?>
 			 
           </ul>
