@@ -91,7 +91,7 @@
                   </tr>
                   <tr>
                     <td>Secretario</td>
-                    <td>Osvalo Stroppiana</td>
+                    <td>Osvaldo Stroppiana</td>
                   </tr>
                   <tr>
                     <td>Pro-secretario</td>
