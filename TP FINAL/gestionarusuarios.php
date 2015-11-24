@@ -52,6 +52,7 @@
             <li><a href="nuestracomision.php">Nuestra comisión</a></li>
             <li><a href="contacto.php">Contacto</a></li>
             <?php if(isset($_SESSION['usuario'])){ ?>
+            		<li><a href="modificarcuenta.php">Modificar cuenta</a></li>
             		<li><a href="cerrarsesion.php">Cerrar sesión</a></li>
             		<?php } else{ ?>
             		<li><a href="iniciarsesion.php">Inciar sesión</a></li>
