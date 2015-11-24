@@ -7,15 +7,9 @@
     <title>Sociedad Italiana de Pujato Gral. Armando Díaz</title>
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <script type="text/jscript">
-		function actualizarReserva(codReserva){
-			var cod = codReserva;
-			$('#codigoActualizar').val(cod);
-			document.formActualizar.submit();
-		}
-		
-		function eliminarReserva(codReserva){
-			var cod = codReserva;
-			$('#codigoEliminar').val(cod);
+			
+		function eliminarCliente(nombreUsuario){
+			$('#usuario').val(nombreUsuario);
 			document.formEliminar.submit();
 		}
 	</script>
@@ -66,8 +60,8 @@
                     <li class="dropdown active">
 							  <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Panel administrador <span class="caret"></span></a>
 							  <ul class="dropdown-menu">
-								<li><a href="gestionarusuarios.php">Gestionar usuarios</a></li>
-								<li class="active"><a href="gestionarreservas.php">Gestionar reservas</a></li>
+								<li class="active"><a href="gestionarusuarios.php">Gestionar usuarios</a></li>
+								<li><a href="gestionarreservas.php">Gestionar reservas</a></li>
               				  </ul>
                     </li>
              <?php } ?>
@@ -83,7 +77,7 @@
 				if(isset($_SESSION['usuario']) and $_SESSION['usuario']=='administrador'){
 					include("conexion.inc");
 					
-					$Cant_por_Pag = 8;
+					$Cant_por_Pag = 3;
 					
 					$pagina = isset ( $_GET['pagina']) ? $_GET['pagina'] : null ;
 					if (!$pagina) {
@@ -93,13 +87,13 @@
 					else {
 						$inicio = ($pagina - 1) * $Cant_por_Pag;
 					}
-					$vSql = "SELECT * FROM reservas";
+					$vSql = "SELECT * FROM clientes";
 					$vResultado = mysqli_query($link,$vSql);
 					$total_registros=mysqli_num_rows($vResultado);
 					$total_paginas = ceil($total_registros/ $Cant_por_Pag);
 					echo ("<h5 style='text-align:center'>Mostrando la página " . $pagina . " de " . $total_paginas . "</h5>");
 					
-					$vSql = "SELECT * FROM reservas order by dia desc limit " . $inicio . "," . $Cant_por_Pag;
+					$vSql = "SELECT * FROM clientes order by apellido asc limit " . $inicio . "," . $Cant_por_Pag;
 					$vResultado = mysqli_query($link,$vSql);
 					$total_registros=mysqli_num_rows($vResultado);
 					
@@ -107,11 +101,10 @@
 					<table class="table table-bordered">
 					  <tbody>
 						<tr>
-						  <th scope="col">Código</th>
-						  <th scope="col">Día</th>
-						  <th scope="col">Estado</th>
+						  <th scope="col">Apellido</th>
+						  <th scope="col">Nombre</th>
+						  <th scope="col">Teléfono</th>
 						  <th scope="col">Usuario</th>
-						  <th scope="col" style="border-top:hidden; border-right:hidden; border-bottom:hidden"></th>
 						  <th scope="col" style="border-top:hidden; border-right:hidden; border-bottom:hidden"></th>
 						</tr>
 					<?php
@@ -119,20 +112,12 @@
 					{
 					?>
 						<tr>
-							<td><?php echo ($fila['codigo']); ?></td>
-							<td><?php echo ($fila['dia']); ?></td>
-							<td><?php echo ($fila['estado']); ?></td>
+							<td><?php echo ($fila['apellido']); ?></td>
+							<td><?php echo ($fila['nombre']); ?></td>
+							<td><?php echo ($fila['telefono']); ?></td>
 							<td><?php echo ($fila['usuario']); ?></td>
 							<td style="border-top:hidden; border-right:hidden; border-bottom:hidden">
-							<?php if($fila['estado']=="Pendiente"){
-								?>	
-								<input type="button" class="btn btn-success" value="PAGAR" onClick="javascript:actualizarReserva(<?php echo($fila['codigo'])?>);" />	
-								<?php
-							}
-							?>
-							</td>
-							<td style="border-top:hidden; border-right:hidden; border-bottom:hidden">
-								<input type="button" class="btn btn-danger" value="ELIMINAR" onClick="javascript:eliminarReserva(<?php echo($fila['codigo'])?>);" />
+								<input type="button" class="btn btn-danger" value="ELIMINAR" onClick="javascript:eliminarCliente('<?php echo ($fila['usuario']) ?>');S" />
 							</td>
 						</tr>
 					<?php
@@ -147,7 +132,7 @@
 						<p style="text-align:center"> <?php
 						for ($i=1;$i<=$total_paginas;$i++){
 							if ($pagina == $i) echo $pagina . " ";
-							else echo "<a href='gestionarreservas.php?pagina=" . $i ."'>" . $i . "</a> ";
+							else echo "<a href='gestionarusuarios.php?pagina=" . $i ."'>" . $i . "</a> ";
 						}
 						?> </p> <?php
 					}
@@ -158,12 +143,11 @@
           </div>
       </div>
      </div>
-    <form class="hidden" action="actualizarReserva.php" id="formActualizar" name="formActualizar" method="post">
-    	<input type="text" id="codigoActualizar" name="codigo" />
+
+    <form class="hidden" action="eliminarCliente.php" id="formEliminar" name="formEliminar" method="post">
+    	<input type="text" id="usuario" name="usuario" />
     </form>
-    <form class="hidden" action="eliminarReserva.php" id="formEliminar" name="formEliminar" method="post">
-    	<input type="text" id="codigoEliminar" name="codigo" />
-    </form>
+    
     <footer class="footer navbar-fixed-bottom">
       <div class="container">
         <p class="text-muted">Sociedad Italiana de Pujato General Armando Díaz - Dirección: J.R. Rodríguez 448 - Pujato, Santa Fe, Argentina - Telefono: (03464)-494636</p>
