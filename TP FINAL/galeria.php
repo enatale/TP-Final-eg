@@ -81,6 +81,13 @@
             <div id="galeria_miniaturas">
                 <img class="miniatura" onClick="javascript:document.getElementById('imgGaleria').src=this.src;" src="imagenes/galeria/fachada1.jpg" />
                 <img class="miniatura" onClick="javascript:document.getElementById('imgGaleria').src=this.src;" src="imagenes/galeria/fachada2.jpg" />
+                <img class="miniatura" onClick="javascript:document.getElementById('imgGaleria').src=this.src;" src="imagenes/galeria/SalonPrincipal1.jpg" />
+                <img class="miniatura" onClick="javascript:document.getElementById('imgGaleria').src=this.src;" src="imagenes/galeria/SalonPrincipal2.jpg" />
+                <img class="miniatura" onClick="javascript:document.getElementById('imgGaleria').src=this.src;" src="imagenes/galeria/SalonPrincipal3.jpg" />
+                <img class="miniatura" onClick="javascript:document.getElementById('imgGaleria').src=this.src;" src="imagenes/galeria/Baños1.jpg" />
+                <img class="miniatura" onClick="javascript:document.getElementById('imgGaleria').src=this.src;" src="imagenes/galeria/Baños2.jpg" />
+                <img class="miniatura" onClick="javascript:document.getElementById('imgGaleria').src=this.src;" src="imagenes/galeria/Cocina1.jpg" />
+                <img class="miniatura" onClick="javascript:document.getElementById('imgGaleria').src=this.src;" src="imagenes/galeria/Cocina2.jpg" />
             </div>
         </div>
     
