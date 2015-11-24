@@ -43,3 +43,7 @@ body {
   height: 40px;
   background-color: #222222;
 }
+.navbar-fixed-bottom{
+text-align:center;
+height:auto;
+}

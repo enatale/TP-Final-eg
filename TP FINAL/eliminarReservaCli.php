@@ -21,8 +21,8 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
            <ul class="nav navbar-nav">
-            <li> <a>
-				<?php
+            <li><a>
+            	<?php
 				session_start(); 
 				if(isset($_SESSION['usuario'])){
 						$nombreSesion = $_SESSION['nombre'];
@@ -33,33 +33,23 @@
           </ul>
           <ul class="nav navbar-nav navbar-right">
           	<li><a href="index.html">Inicio</a></li>
-            <li><a href="galeria.php">Galería</a></li>        
-			          
-		    <?php if(isset($_SESSION['usuario'])){ ?>
-                    <li class="dropdown active">
-							  <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Reservas <span class="caret"></span></a>
-							  <ul class="dropdown-menu">
-								<li><a class="active" href="reserva.php">Reservar instalaciones</a></li>
-								<li><a href="misreservas.php">Mis reservas</a></li>
-              				  </ul>
-                    </li> 
-            		
-					<?php } else{ ?>
-            		
-					<li><a href="disponibilidad.php">Ver disponibilidad</a></li>
-             <?php } ?>
-	   
-		   
+            <li class="active"><a href="galeria.php">Galería</a></li>
+			<li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Reservas <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="reserva.php">Reservar instalaciones</a></li>
+                <li><a href="misreservas.php">Mis reservas</a></li>
+              </ul>
+            </li>
             <li><a href="ubicacion.php">Ubicación</a></li>
             <li><a href="nuestracomision.php">Nuestra comisión</a></li>
             <li><a href="contacto.php">Contacto</a></li>
             <?php if(isset($_SESSION['usuario'])){ ?>
-                    <li><a href="modificarcuenta.php">Modificar cuenta</a></li>
             		<li><a href="cerrarsesion.php">Cerrar sesión</a></li>
             		<?php } else{ ?>
             		<li><a href="iniciarsesion.php">Inciar sesión</a></li>
              <?php } ?>
-			 <?php if(isset($_SESSION['usuario']) and $_SESSION['usuario']=='administrador'){ ?>
+             <?php if(isset($_SESSION['usuario']) and $_SESSION['usuario']=='administrador'){ ?>
                     <li class="dropdown">
 							  <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Panel administrador <span class="caret"></span></a>
 							  <ul class="dropdown-menu">
@@ -68,38 +58,33 @@
               				  </ul>
                     </li>
              <?php } ?>
-			 
           </ul>
         </div>
       </div>
     </nav>
-	
-	<div class="container" style="margin-top:55px">
-      <div class="row row-centered">
-          <div class="col-lg-6 col-centered">
-	
-	<form action="hacerreserva.php" method="post">
-            <h3>Ingrese la fecha que desea reservar nuestras instalaciones</h3>
-			<label for="dia" class="sr-only">Dia</label>
-            <input type="text" id="dia" name="dia" class="form-control" placeholder="Día" required autofocus>
-			<label for="mes" class="sr-only">Mes</label>
-            <input type="text" id="mes" name="mes" class="form-control" placeholder="Mes" required>
-            <label for="anio" class="sr-only">Año</label>
-            <input type="text" id="anio" name="anio" class="form-control" placeholder="Año" required>
-	
-			
-
-           
-
-            <button class="btn btn-lg btn-success btn-block" type="submit" style="margin-top:10px">Reservar</button>
- 
-    </form>
-	     </div>
-	  </div>
-	</div>
-	
-	
-	
+    
+    <div class="container" style="margin-top:55px">
+        <div class="row row-centered" style="text-align:center">
+            <div class="col-lg-6 col-centered">
+            	<?php
+					if(isset($_POST['codigo'])){
+						extract($_POST);
+						include("conexion.inc");
+						$vSql = "Delete from reservas where codigo = '$codigo'";
+						mysqli_query($link, $vSql) or die(mysqli_error($link));
+						header('Location: misreservas.php');
+					} else {?>
+                    	<h3 style="color:#FF0004">Error en el envío de datos</h3>
+                        <a href='gestionarreservas.php'>Volver atrás</a>
+                        <?php
+					}
+				?>
+            </div>
+        </div>
+    </div>
+    
+    
+    
     <footer class="footer navbar-fixed-bottom">
       <div class="container">
         <p class="text-muted">Sociedad Italiana de Pujato General Armando Díaz - Dirección: J.R. Rodríguez 448 - Pujato, Santa Fe, Argentina - Telefono: (03464)-494636</p>

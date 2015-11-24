@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 18-11-2015 a las 19:28:18
+-- Tiempo de generación: 24-11-2015 a las 20:20:33
 -- Versión del servidor: 5.6.17
 -- Versión de PHP: 5.5.12
 
@@ -40,11 +40,17 @@ CREATE TABLE IF NOT EXISTS `clientes` (
 --
 
 INSERT INTO `clientes` (`usuario`, `contrasena`, `nombre`, `apellido`, `telefono`) VALUES
-('', '', '', '', ''),
-('fsdgfhj', 'wer', 'qwere', 'qw', 'qwe'),
-('q', 'q', 'q', 'q', 'q'),
-('qqq', 'qq', 'q', 'q', 'q'),
-('sadfghj', 'j23', 'sdf', 'af', '44982852');
+('administrador', 'entornos2015', 'Osvaldo', 'Stroppiana', '3464494965'),
+('diegopujato', 'diegopujato', 'Diego', 'Stroppiana', '3464494965'),
+('usuario1', 'usuario1', 'usuario1', 'usuario1', 'usuario1'),
+('usuario2', 'usuario2', 'usuario2', 'usuario2', 'usuario2'),
+('usuario3', 'usuario3', 'usuario3', 'usuario3', 'usuario3'),
+('usuario4', 'usuario4', 'usuario4', 'usuario4', 'usuario4'),
+('usuario5', 'usuario5', 'usuario5', 'usuario5', 'usuario5'),
+('usuario6', 'usuario6', 'usuario6', 'usuario6', 'usuario6'),
+('usuario7', 'usuario7', 'usuario7', 'usuario7', 'usuario7'),
+('usuario8', 'usuario8', 'usuario8', 'usuario8', 'usuario8'),
+('usuario9', 'usuario9', 'usuario9', 'usuario9', 'usuario9');
 
 -- --------------------------------------------------------
 
@@ -59,7 +65,16 @@ CREATE TABLE IF NOT EXISTS `reservas` (
   `usuario` varchar(25) COLLATE utf8_spanish2_ci NOT NULL,
   PRIMARY KEY (`codigo`),
   KEY `usuario` (`usuario`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish2_ci AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_spanish2_ci AUTO_INCREMENT=9 ;
+
+--
+-- Volcado de datos para la tabla `reservas`
+--
+
+INSERT INTO `reservas` (`codigo`, `dia`, `estado`, `usuario`) VALUES
+(1, '2015-11-23', 'Paga', 'administrador'),
+(2, '2015-11-19', 'Pendiente', 'administrador'),
+(8, '2015-12-31', 'Pendiente', 'diegopujato');
 
 --
 -- Restricciones para tablas volcadas

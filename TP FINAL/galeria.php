@@ -17,10 +17,8 @@
             <span class="sr-only">Toggle navigation</span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a style="margin:0px; padding:0px" class="navbar-brand" href="#"><img style="height:100%" src="imagenes/logo.jpg" alt=""></a>
-        </div>
+            <span class="icon-bar"></span>          </button>
+          <a style="margin:0px; padding:0px" class="navbar-brand" href="#"><img style="height:100%" src="imagenes/logo.jpg" alt=""></a>        </div>
         <div id="navbar" class="navbar-collapse collapse">
            <ul class="nav navbar-nav">
             <li><a>
@@ -76,21 +74,32 @@
         </div>
       </div>
     </nav>
-        <div id="galeria" class="container">
-            <div id="galeria_imagen"><img class="img-responsive" id="imgGaleria" src="imagenes/galeria/fachada1.jpg" /></div>
-            <div id="galeria_miniaturas">
-                <img class="miniatura" onClick="javascript:document.getElementById('imgGaleria').src=this.src;" src="imagenes/galeria/fachada1.jpg" />
-                <img class="miniatura" onClick="javascript:document.getElementById('imgGaleria').src=this.src;" src="imagenes/galeria/fachada2.jpg" />
-                <img class="miniatura" onClick="javascript:document.getElementById('imgGaleria').src=this.src;" src="imagenes/galeria/SalonPrincipal1.jpg" />
-                <img class="miniatura" onClick="javascript:document.getElementById('imgGaleria').src=this.src;" src="imagenes/galeria/SalonPrincipal2.jpg" />
-                <img class="miniatura" onClick="javascript:document.getElementById('imgGaleria').src=this.src;" src="imagenes/galeria/SalonPrincipal3.jpg" />
-                <img class="miniatura" onClick="javascript:document.getElementById('imgGaleria').src=this.src;" src="imagenes/galeria/Baños1.jpg" />
-                <img class="miniatura" onClick="javascript:document.getElementById('imgGaleria').src=this.src;" src="imagenes/galeria/Baños2.jpg" />
-                <img class="miniatura" onClick="javascript:document.getElementById('imgGaleria').src=this.src;" src="imagenes/galeria/Cocina1.jpg" />
-                <img class="miniatura" onClick="javascript:document.getElementById('imgGaleria').src=this.src;" src="imagenes/galeria/Cocina2.jpg" />
-            </div>
-        </div>
-    
+    <div id="galeria" class="container">
+		<div class="row row-centered">
+			<div class="col-lg-8 col-centered">
+				<div id="galeria_imagen"><img class="img-responsive" id="imgGaleria" src="imagenes/galeria/fachada1.jpg" /></div>
+					<div id="galeria_miniaturas">
+						<img class="miniatura" onClick="javascript:document.getElementById('imgGaleria').src=this.src;" src="imagenes/galeria/fachada1.jpg" />
+						<img class="miniatura" onClick="javascript:document.getElementById('imgGaleria').src=this.src;" src="imagenes/galeria/fachada2.jpg" />
+						<img class="miniatura" onClick="javascript:document.getElementById('imgGaleria').src=this.src;" src="imagenes/galeria/Hall e ingreso a los Baños de Frente.JPG" />
+						<img class="miniatura" onClick="javascript:document.getElementById('imgGaleria').src=this.src;" src="imagenes/galeria/Hall y Secretaría.JPG" />
+						<img class="miniatura" onClick="javascript:document.getElementById('imgGaleria').src=this.src;" src="imagenes/galeria/Hall.JPG" />
+						<img class="miniatura" onClick="javascript:document.getElementById('imgGaleria').src=this.src;" src="imagenes/galeria/SalonPrincipal1.jpg" />
+						<img class="miniatura" onClick="javascript:document.getElementById('imgGaleria').src=this.src;" src="imagenes/galeria/SalonPrincipal2.jpg" />
+						<img class="miniatura" onClick="javascript:document.getElementById('imgGaleria').src=this.src;" src="imagenes/galeria/SalonPrincipal3.jpg" />
+						<img class="miniatura" onClick="javascript:document.getElementById('imgGaleria').src=this.src;" src="imagenes/galeria/Escenario.JPG" /> 
+						<img class="miniatura" onClick="javascript:document.getElementById('imgGaleria').src=this.src;" src="imagenes/galeria/Cocina1.jpg" />
+						<img class="miniatura" onClick="javascript:document.getElementById('imgGaleria').src=this.src;" src="imagenes/galeria/Cocina2.jpg" /> 
+						<img class="miniatura" onClick="javascript:document.getElementById('imgGaleria').src=this.src;" src="imagenes/galeria/Interior Parrillero, Puerta de ingreso a Cocina.JPG" /> 
+						<img class="miniatura" onClick="javascript:document.getElementById('imgGaleria').src=this.src;" src="imagenes/galeria/Interior Parrillero con en Depósito.JPG" /> 	
+						<img class="miniatura" onClick="javascript:document.getElementById('imgGaleria').src=this.src;" src="imagenes/galeria/Patio y Frentes de Cocina y Parrillero.JPG" />      
+						<img class="miniatura" onClick="javascript:document.getElementById('imgGaleria').src=this.src;" src="imagenes/galeria/Baños1.jpg" />
+						<img class="miniatura" onClick="javascript:document.getElementById('imgGaleria').src=this.src;" src="imagenes/galeria/Baños2.jpg" />
+									 
+					</div>
+				</div>
+			</div>
+		</div>
     </div>
     <footer class="footer">
       <div class="container">

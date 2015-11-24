@@ -77,14 +77,19 @@
 			$mes = $_POST['mes'];
 			$dia = $_POST['dia'];
 			$fecha= $anio."-".$mes."-".$dia;
-			if($mes>'12' or $dia>'31' or ($dia>'30' and ($mes=='4' or $mes=='6' or $mes=='9' or $mes=='11')) or ($dia>'28' and $mes=='2')  or !is_numeric ($anio) or !is_numeric ($mes) or !is_numeric ($dia))
+			$hoy=date("Y-m-d");
+			if($mes>'12' or $dia>'31' or ($dia>'30' and ($mes=='4' or $mes=='6' or $mes=='9' or $mes=='11')) or ($dia>'28' and $mes=='2')  or !is_numeric ($anio) or !is_numeric ($mes) or !is_numeric ($dia) or $anio>'3000')
 			{
 			echo("<h3> Fecha no válida </h3><br />");
-			echo("<a href='disponibilidad.php'>Volver</a>");
+			echo("<a href='reserva.php'>Volver</a>");
 			}
 			else
 			{
-			
+			if ($hoy>$fecha){
+			echo("<h3> La fecha ya pasó</h3><br />");
+			echo("<a href='reserva.php'>Volver</a>");
+			}
+			else{
 			include('conexion.inc');
 						
 			$consulta = "Select * from reservas where dia = '$fecha' ";
@@ -112,7 +117,7 @@
 			mysqli_free_result($resultado);
 			mysqli_close($link);
 			}
-
+			}
 			?>
 			
 

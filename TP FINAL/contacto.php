@@ -72,7 +72,8 @@
     <div class="container" style="margin-top:55px">
     	<div class="row row-centered"> 
            <div class="col-lg-6 col-centered">   
-                <form action="consulta.php" method="post" name="formConsulta">
+                <h3>Envíe su consulta y será respondida a la brevedad</h3>
+				<form action="consulta.php" method="post" name="formConsulta">
                 <p>Nombre: <input class="form-control" type="text" name="nombre" required/></p>
                 <p>Tu mail:<input class="form-control" type="email" id="remitente" name="remitente" required /></p>
                 <p>Asunto:<input class="form-control" type="text" id="asunto" name="asunto" required  /></p>

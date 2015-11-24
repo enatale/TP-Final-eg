@@ -78,7 +78,7 @@
 				if(isset($_SESSION['usuario']) and $_SESSION['usuario']=='administrador'){
 					include("conexion.inc");
 					
-					$Cant_por_Pag = 3;
+					$Cant_por_Pag = 5;
 					
 					$pagina = isset ( $_GET['pagina']) ? $_GET['pagina'] : null ;
 					if (!$pagina) {
