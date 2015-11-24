@@ -18,7 +18,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a style="margin:0px; padding:0px" class="navbar-brand" href="#"><img style="height:100%" src="imagenes/logo.jpg" alt=""></a>
+          <a style="margin:0px; padding:0px" class="navbar-brand" href="index.html"><img style="height:100%" src="imagenes/logo.jpg" alt=""></a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
            <ul class="nav navbar-nav">
@@ -86,7 +86,7 @@
                     <form action="modificarUsuario.php" method="post" name="formModificar" id="formModificar"  >
                         <h2>Ingrese sus datos:</h2>
                         
-                        <input type="text" id="usuario" name="usuario" class="form-control" placeholder="Usuario" 
+                        <input type="text" id="usuario" name="usuario" class="form-control" placeholder="Usuario" disabled
                         	value="<?php echo($fila['usuario']) ?>" required autofocus>
                         <input type="text" id="nombre" name="nombre" class="form-control" placeholder="Nombre" 
                         	value="<?php echo($fila['nombre']) ?>" required>
@@ -101,10 +101,12 @@
                         <input type="button" name="modificar" class="btn btn-lg btn-success btn-block" style="margin-top:10px" id="Modificar" value="Modificar" onClick="javascript:enviar();">
                     </form>
                     <?php
-					
+					mysqli_free_result($vResultado);
+					mysqli_close($link);
 				} else {
 					echo('<h1 style="color:red"> DEBE ESTAR LOGUEADO PARA VER ESTA PÁGINA</h1>');
 				}
+				
                 ?>
           </div>
       </div>

@@ -18,7 +18,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>          </button>
-          <a style="margin:0px; padding:0px" class="navbar-brand" href="#"><img style="height:100%" src="imagenes/logo.jpg" alt=""></a>        </div>
+          <a style="margin:0px; padding:0px" class="navbar-brand" href="index.html"><img style="height:100%" src="imagenes/logo.jpg" alt=""></a>        </div>
         <div id="navbar" class="navbar-collapse collapse">
            <ul class="nav navbar-nav">
             <li><a>

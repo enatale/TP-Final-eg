@@ -28,7 +28,6 @@
 			continua = false;
 		}
 		if(pass_1!=""&&pass_2!=""&&pass_1==pass_2){
-			alert("entro");
 			$('#contrasena').val(pass_1);
 		}
 		if(continua){
