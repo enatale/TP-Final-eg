@@ -10,7 +10,7 @@
   <body>
    <?php include'encabezado.php';?>
     
-    <div class="container" style="margin-top:55px">
+    <div class="container">
       <div class="row row-centered" style="text-align:center">
           <div class="col-lg-6 col-centered">
 				<?php
@@ -26,7 +26,10 @@
 						echo('<h3 style="color:red; text-align:center"> Error al actualizar información en la base de datos</h3><br />');
 					}
 					echo('<p style="text-align:center"><a href="modificarcuenta.php"> Volver </a></p>');
-					mysqli_close($link);					
+					mysqli_close($link);
+					$_SESSION['usuario'] = $usuario;
+					$_SESSION['apellido'] = $apellido;
+					$_SESSION['nombre'] = $nombre;				
 				} else {
 					echo('<h1 style="color:red"> DEBE ESTAR LOGUEADO PARA VER ESTA PÁGINA</h1>');
 				}

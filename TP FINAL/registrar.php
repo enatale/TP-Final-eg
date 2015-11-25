@@ -12,7 +12,7 @@
   <body>
     <?php include'encabezado.php';?>
     
-    <div class="container" style="margin-top:55px">
+    <div class="container">
       <div class="row row-centered">
           <div class="col-lg-6 col-centered">
           <form action="altausuario.php" method="post" name="formRegistro" id="formRegistro"  >

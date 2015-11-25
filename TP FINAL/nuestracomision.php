@@ -9,7 +9,7 @@
   </head>
   <body>
    <?php include'encabezado.php';?>
-    <div class="container" style="margin-top:55px">    
+    <div class="container">    
         <div class="row row-centered">
             <div class="col-md-6 col-centered"><h3 style="text-align:center"><label >Estos son los integrantes de nuestra comisión:</label></h3></div> 
         </div>        

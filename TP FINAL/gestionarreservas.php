@@ -23,7 +23,7 @@
   <body>
     <?php include'encabezado.php';?>
     
-<div class="container" style="margin-top:55px">
+<div class="container">
       <div class="row row-centered" style="text-align:center">
           <div class="col-lg-6 col-centered">
 				<?php
@@ -46,7 +46,7 @@
 					$total_paginas = ceil($total_registros/ $Cant_por_Pag);
 					echo ("<h5 style='text-align:center'>Mostrando la página " . $pagina . " de " . $total_paginas . "</h5>");
 					
-					$vSql = "SELECT * FROM reservas order by dia desc limit " . $inicio . "," . $Cant_por_Pag;
+					$vSql = "SELECT * FROM reservas order by dia asc limit " . $inicio . "," . $Cant_por_Pag;
 					$vResultado = mysqli_query($link,$vSql);
 					$total_registros=mysqli_num_rows($vResultado);
 					
@@ -64,10 +64,12 @@
 					<?php
 					while ($fila = mysqli_fetch_array($vResultado))
 					{
+					$fecha=$fila['dia'];
+					$fechaordenada=substr($fecha, 8).'-'.substr($fecha,5 ,2).'-'.substr($fecha, 0, 4);
 					?>
 						<tr>
 							<td><?php echo ($fila['codigo']); ?></td>
-							<td><?php echo ($fila['dia']); ?></td>
+							<td><?php echo ($fechaordenada); ?></td>
 							<td><?php echo ($fila['estado']); ?></td>
 							<td><?php echo ($fila['usuario']); ?></td>
 							<td style="border-top:hidden; border-right:hidden; border-bottom:hidden">

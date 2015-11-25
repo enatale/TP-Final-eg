@@ -9,7 +9,7 @@
   </head>
   <body>
    <?php include'encabezado.php';?>
-    <div class="container" style="margin-top:55px">
+    <div class="container">
         <div class="row row-centered" style="text-align:center">
             <div class="col-lg-6 col-centered">
             	<?php
