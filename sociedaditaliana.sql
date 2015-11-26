@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 24-11-2015 a las 20:20:33
+-- Tiempo de generación: 26-11-2015 a las 01:45:23
 -- Versión del servidor: 5.6.17
 -- Versión de PHP: 5.5.12
 
@@ -40,17 +40,14 @@ CREATE TABLE IF NOT EXISTS `clientes` (
 --
 
 INSERT INTO `clientes` (`usuario`, `contrasena`, `nombre`, `apellido`, `telefono`) VALUES
-('administrador', 'entornos2015', 'Osvaldo', 'Stroppiana', '3464494965'),
-('diegopujato', 'diegopujato', 'Diego', 'Stroppiana', '3464494965'),
-('usuario1', 'usuario1', 'usuario1', 'usuario1', 'usuario1'),
-('usuario2', 'usuario2', 'usuario2', 'usuario2', 'usuario2'),
-('usuario3', 'usuario3', 'usuario3', 'usuario3', 'usuario3'),
-('usuario4', 'usuario4', 'usuario4', 'usuario4', 'usuario4'),
-('usuario5', 'usuario5', 'usuario5', 'usuario5', 'usuario5'),
-('usuario6', 'usuario6', 'usuario6', 'usuario6', 'usuario6'),
-('usuario7', 'usuario7', 'usuario7', 'usuario7', 'usuario7'),
-('usuario8', 'usuario8', 'usuario8', 'usuario8', 'usuario8'),
-('usuario9', 'usuario9', 'usuario9', 'usuario9', 'usuario9');
+('administrador', 'admin', 'Osvaldo', 'Stroppiana', '33334444'),
+('diegostropp', 'diego', 'Diego', 'Stroppiana', '4623333'),
+('elsita', 'lalalala', 'Elsa', 'Pallo', '4988025'),
+('en', '11111111', 'Esteban', 'Natale', '4988025'),
+('gonzi', 'rtyuio', 'Gonzalo', 'Lopez', '4444444'),
+('lmg', 'mario', 'Lucio Mario', 'Guarneri', '4789563'),
+('marita', 'lalala', 'Mariela', 'Sabetti', '4922983'),
+('topo', 'lacueva', 'Franco', 'HernÃ¡ndez', '4995544');
 
 -- --------------------------------------------------------
 
@@ -65,16 +62,21 @@ CREATE TABLE IF NOT EXISTS `reservas` (
   `usuario` varchar(25) COLLATE utf8_spanish2_ci NOT NULL,
   PRIMARY KEY (`codigo`),
   KEY `usuario` (`usuario`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_spanish2_ci AUTO_INCREMENT=9 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_spanish2_ci AUTO_INCREMENT=15 ;
 
 --
 -- Volcado de datos para la tabla `reservas`
 --
 
 INSERT INTO `reservas` (`codigo`, `dia`, `estado`, `usuario`) VALUES
-(1, '2015-11-23', 'Paga', 'administrador'),
-(2, '2015-11-19', 'Pendiente', 'administrador'),
-(8, '2015-12-31', 'Pendiente', 'diegopujato');
+(7, '2015-11-18', 'Pendiente', 'elsita'),
+(8, '2015-11-17', 'Paga', 'elsita'),
+(9, '2016-10-13', 'Pendiente', 'topo'),
+(10, '2015-11-26', 'Pendiente', 'topo'),
+(11, '2015-12-05', 'Paga', 'topo'),
+(12, '2016-11-19', 'Pendiente', 'en'),
+(13, '2015-12-14', 'Pendiente', 'en'),
+(14, '2016-07-06', 'Paga', 'en');
 
 --
 -- Restricciones para tablas volcadas
