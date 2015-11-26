@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -15,12 +15,12 @@
           <div class="col-lg-6 col-centered">
 	
 	<form action="verdisponibilidad.php" method="post">
-            <h3>Ingrese la fecha que desea ver si nuestras instalaciones están disponibles</h3>
-           	<label for="dia" class="sr-only">Dia</label>
+            <h1>Ingrese la fecha que desea ver si nuestras instalaciones están disponibles</h1>
+           	<label for="dia" >Dia:</label>
             <input type="text" id="dia" name="dia" class="form-control" placeholder="Día" required autofocus>
-			<label for="mes" class="sr-only">Mes</label>
+			<label for="mes" >Mes:</label>
             <input type="text" id="mes" name="mes" class="form-control" placeholder="Mes" required>
-		    <label for="anio" class="sr-only">Año</label>
+		    <label for="anio">Año:</label>
             <input type="text" id="anio" name="anio" class="form-control" placeholder="Año" required>   
 
             <button class="btn btn-lg btn-success btn-block" type="submit" style="margin-top:10px">Ver disponibilidad</button>

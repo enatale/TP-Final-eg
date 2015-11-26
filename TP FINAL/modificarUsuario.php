@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -20,10 +20,10 @@
 					$usuario= $_SESSION['usuario'];
 					$vSql = "Update clientes set nombre='$nombre', apellido = '$apellido', contrasena = '$contrasena', telefono = '$telefono' where usuario = '$usuario'";
 					if(mysqli_query($link, $vSql)){
-						echo('<h3 style="text-align:center"> Las modificaciones se realizaron con éxito</h3><br />');
+						echo('<h1 style="text-align:center"> Las modificaciones se realizaron con éxito</h1><br />');
 					}
 					else{
-						echo('<h3 style="color:red; text-align:center"> Error al actualizar información en la base de datos</h3><br />');
+						echo('<h1 style="color:red; text-align:center"> Error al actualizar información en la base de datos</h1><br />');
 					}
 					echo('<p style="text-align:center"><a href="modificarcuenta.php"> Volver </a></p>');
 					mysqli_close($link);

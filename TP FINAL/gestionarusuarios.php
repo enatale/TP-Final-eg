@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -92,7 +92,7 @@
      </div>
 
     <form class="hidden" action="eliminarCliente.php" id="formEliminar" name="formEliminar" method="post">
-    	<input type="text" id="usuario" name="usuario" />
+    	<label for="usuario"><input type="text" id="usuario" name="usuario" /></label>
     </form>
     
     <footer class="footer navbar-fixed-bottom">

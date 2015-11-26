@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -30,7 +30,7 @@
 					$cantidadReservas=mysqli_num_rows($vResultado);
 					if ($cantidadReservas>0)
 					{
-						echo("<h3>Estas son sus reservas actuales:</h3><br />");
+						echo("<h1>Estas son sus reservas actuales:</h1><br />");
 						$vSql2= "SELECT * FROM clientes WHERE usuario='$usuario'";
 						$vResultado2= mysqli_query($link,$vSql2); 
 						?>
@@ -59,22 +59,21 @@
 								</tr>
 							<?php
 						}
+						echo("</tbody></table>");
 						mysqli_free_result($vResultado);
 						mysqli_close($link);
 					}
 					else{
-						echo("<h3> Usted no posee reservas actualmente</h3><br />");
+						echo("<h1> Usted no posee reservas actualmente</h1><br />");
 						echo("<a href='reserva.php'>Ir a reservar instalaciones</a>");
 					}
 					?>
-					  </tbody>
-					</table>
 					
 		  </div>
 	  </div>
 	</div>
 	<form class="hidden" action="eliminarReservaCli.php" id="formEliminar" name="formEliminar" method="post">
-    	<input type="text" id="codigoEliminar" name="codigo" />
+    	<label for="codigoEliminar">"<input type="text" id="codigoEliminar" name="codigo" /></label>
     </form>
 	
     <footer class="footer navbar-fixed-bottom">

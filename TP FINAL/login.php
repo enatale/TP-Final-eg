@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -34,12 +34,12 @@
 							header('Location: reserva.php');
 						}
 						else{
-							echo("<h3> Usuario y/o contraseña incorrecto/s </h3><br />");
-							echo("<h3> Usuario y/o contraseña incorrecto/s </h3><br /><a href='iniciarsesion.php'>Volver a inicio de sesión</a>");
+							//echo("<h3> Usuario y/o contraseña incorrecto/s </h3><br />");
+							echo("<h1> Usuario y/o contraseña incorrecto/s </h1><br /><a href='iniciarsesion.php'>Volver a inicio de sesión</a>");
 						}
 					}
 					else{
-						echo("<h3>Error al pasar datos desde el formulario</h3><br />");
+						echo("<h1>Error al pasar datos desde el formulario</h1><br />");
 						echo("<a href='iniciarsesion.php'>Volver a inicio de sesión</a>");
 					}
 					mysqli_free_result($resultado);

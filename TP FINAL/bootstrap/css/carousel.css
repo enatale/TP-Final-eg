@@ -1,6 +1,5 @@
-#galeria, #galeria * {box-sizing:border-box,-moz-box-sizing:border-box}
+#galeria, #galeria * {-moz-box-sizing:border-box;box-sizing:border-box}
 #galeria {
-margin-top:55px;
 padding: 10px;
 padding-bottom: 0;
 width: 100%;  /* Ancho de la galería */

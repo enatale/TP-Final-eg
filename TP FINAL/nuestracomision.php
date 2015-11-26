@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,7 +11,7 @@
    <?php include'encabezado.php';?>
     <div class="container">    
         <div class="row row-centered">
-            <div class="col-md-6 col-centered"><h3 style="text-align:center"><label >Estos son los integrantes de nuestra comisión:</label></h3></div> 
+            <div class="col-md-6 col-centered"><h1 style="text-align:center">Estos son los integrantes de nuestra comisión:</h1></div> 
         </div>        
         <div class="row row-centered" >
             <div class="col-md-6 col-centered">

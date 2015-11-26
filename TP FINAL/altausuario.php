@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -26,7 +26,7 @@
                 $vResultado = mysqli_query($link,$vSql) or die (mysqli_error($link));		
                 $vCantUsuarios = mysqli_fetch_row($vResultado);	
                 if ($vCantUsuarios[0] != 0){
-                 echo ("<h3>El usuario ya existe<br></h3>");
+                 echo ("<h1>El usuario ya existe<br></h1>");
                  echo ("<a href='registrar.php'>Volver al registro</a>");
                 }
                 else {
@@ -36,7 +36,7 @@
 				$_SESSION['usuario']=$usuario;
 				$_SESSION['nombre']=$nombre;
 				$_SESSION['apellido']=$apellido;
-                echo("<h3>El Usuario fue registrado correctamente<br></h3>");
+                echo("<h1>El Usuario fue registrado correctamente<br></h1>");
                 echo ("<a href='reserva.php'>Ir a reservas</a>");
                 }
                 mysqli_close($link);

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,10 +14,10 @@
       <div class="row row-centered">
           <div class="col-lg-6 col-centered">
           <form action="login.php" method="post">
-            <h2>Ingrese sus datos de usuario:</h2>
-            <label for="usuario" class="sr-only">Usuario</label>
+            <h1>Ingrese sus datos de usuario:</h1>
+            <label for="usuario">Usuario:</label>
             <input type="text" id="usuario" name="usuario" class="form-control" placeholder="Usuario" required autofocus>
-            <label for="contraseña" class="sr-only">Contraseña</label>
+            <label for="contraseña">Contraseña:</label>
             <input type="password" id="contraseña" name="contraseña" class="form-control" placeholder="Contraseña" required>
 
             <button class="btn btn-lg btn-success btn-block" type="submit" style="margin-top:10px">Iniciar sesión</button>
