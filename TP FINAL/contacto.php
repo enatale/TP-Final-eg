@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,12 +12,12 @@
     <div class="container">
     	<div class="row row-centered"> 
            <div class="col-lg-6 col-centered">   
-                <h3>Envíe su consulta y será respondida a la brevedad</h3>
+                <h1>Envíe su consulta y será respondida a la brevedad</h1>
 				<form action="consulta.php" method="post" name="formConsulta">
-                <p>Nombre: <input class="form-control" type="text" name="nombre" required/></p>
-                <p>Tu mail:<input class="form-control" type="email" id="remitente" name="remitente" required /></p>
-                <p>Asunto:<input class="form-control" type="text" id="asunto" name="asunto" required  /></p>
-                <p>Tu consulta:<textarea class="form-control" name="consulta" cols="20" rows="10" required></textarea></p>
+                <label for="nombre">Nombre:</label> <input class="form-control" type="text" id="nombre" name="nombre" required/>
+                <label for="remitente">Tu mail:</label><input class="form-control" type="email" id="remitente" name="remitente" required />
+                <label for="asunto">Asunto:</label><input class="form-control" type="text" id="asunto" name="asunto" required  />
+                <label for="consulta">Tu consulta:</label><textarea class="form-control" id="consulta" name="consulta" cols="20" rows="10" required></textarea>
                 <input class="btn-success btn btn-block" type="submit" value="Enviar"/>
                 </form>
            </div>     

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -108,10 +108,10 @@
       </div>
      </div>
     <form class="hidden" action="actualizarReserva.php" id="formActualizar" name="formActualizar" method="post">
-    	<input type="text" id="codigoActualizar" name="codigo" />
+    	<label for="codigoActualizar"><input type="text" id="codigoActualizar" name="codigo" /></label>
     </form>
     <form class="hidden" action="eliminarReserva.php" id="formEliminar" name="formEliminar" method="post">
-    	<input type="text" id="codigoEliminar" name="codigo" />
+    	<label for="codigoEliminar"><input type="text" id="codigoEliminar" name="codigo" /></label>
     </form>
     <footer class="footer navbar-fixed-bottom">
       <div class="container">

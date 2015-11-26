@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -29,11 +29,11 @@
                                     ";
                             $asunto="Comentario";
                             if(mail($destinatario,$asunto,$cuerpo,$remitente)){?>                            
-                  			<h3>Su consulta ha sido enviada en breve recibira nuestra respuesta</h3>
+                  			<h1>Su consulta ha sido enviada en breve recibira nuestra respuesta</h1>
                   			<?php }
 							else{
 				  			?>
-                            <h3 style="color:red">ERROR AL ENVIAR CONSULTA</h3>
+                            <h1 style="color:red">ERROR AL ENVIAR CONSULTA</h1>
                             <?php }?>
            </div>     
         </div>

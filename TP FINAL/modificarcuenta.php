@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -23,7 +23,7 @@
 					$fila = mysqli_fetch_array($vResultado);
 					?>
                     <form action="modificarUsuario.php" method="post" name="formModificar" id="formModificar"  >
-                        <h2>Ingrese sus datos:</h2>
+                        <h1>Ingrese sus datos:</h1>
                         
                         <input type="text" id="usuario" name="usuario" class="form-control" placeholder="Usuario" disabled
                         	value="<?php echo($fila['usuario']) ?>" required autofocus>

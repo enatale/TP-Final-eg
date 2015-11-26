@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,20 +13,20 @@
 	
     <div class="container">    
 			<div class="row row-centered">
-				<div class="col-md-6 col-centered"><h3 style="text-align:center"><label >Como ubicar nuestras instalaciones:</label></h3></div> 
+				<div class="col-md-6 col-centered"><h1 style="text-align:center">Como ubicar nuestras instalaciones:</h1></div> 
 			</div>        
 			<div class="row row-centered" >
-				<div class="col-md-6 col-centered"> <img class="img-responsive" src="imagenes/ubicacion/mapagrande.jpg" alt=""> </div>
+				<div class="col-md-6 col-centered"> <img class="img-responsive" src="imagenes/ubicacion/mapagrande.jpg" alt="Localizacion de Pujato"> </div>
 			</div>       
 			<div class="row row-centered" >
-			 <div class="col-md-6 col-centered"><p style="text-align:center"><label>La localidad de pujato se encuentra sobre la ruta nacional N°33, aproximadamente a 40km de Rosario como se muestra en este mapa.</label></p></div>
+			 <div class="col-md-6 col-centered"><p style="text-align:center">La localidad de pujato se encuentra sobre la ruta nacional N°33, aproximadamente a 40km de Rosario como se muestra en este mapa.</p></div>
 			</div>       
 			<div class="row row-centered">
-				 <div class="col-md-6 col-centered"> <img class="img-responsive" src="imagenes/ubicacion/mapachico.jpg" alt=""> </div>       
+				 <div class="col-md-6 col-centered"> <img class="img-responsive" src="imagenes/ubicacion/mapachico.jpg" alt="Localizacion de S.I.G.A.D"> </div>       
 			</div>       
         	<div class="row row-centered" >
             	 <div class="col-md-6 col-centered">
-					<p style="text-align:center"><label >Aquí se puede ver la ubicación de nuestras instalaciones dentro del pueblo.</label></p>
+					<p style="text-align:center">Aquí se puede ver la ubicación de nuestras instalaciones dentro del pueblo.</p>
   				 </div>
    			</div>
     </div>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -21,7 +21,7 @@
 						mysqli_query($link, $vSql) or die(mysqli_error($link));
 						header('Location: gestionarreservas.php');
 					} else {?>
-                    	<h3 style="color:#FF0004">Error en el envío de datos</h3>
+                    	<h1 style="color:#FF0004">Error en el envío de datos</h1>
                         <a href='gestionarreservas.php'>Volver atrás</a>
                         <?php
 					}
