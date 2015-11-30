@@ -24,18 +24,24 @@
 					?>
                     <form action="modificarUsuario.php" method="post" name="formModificar" id="formModificar"  >
                         <h1>Ingrese sus datos:</h1>
-                        
+                        <label for="usuario">Usuario:</label>
                         <input type="text" id="usuario" name="usuario" class="form-control" placeholder="Usuario" disabled
                         	value="<?php echo($fila['usuario']) ?>" required autofocus>
+                        <label for="nombre">Nombre:</label>
                         <input type="text" id="nombre" name="nombre" class="form-control" placeholder="Nombre" 
                         	value="<?php echo($fila['nombre']) ?>" required>
+                        <label for="apellido">Apellido:</label>
                         <input type="text" id="apellido" name="apellido" class="form-control" placeholder="Apellido"
                         	value="<?php echo($fila['apellido']) ?>" required>
+                        <label for="telefono">Telefono:</label>
                         <input type="text" id="telefono" name="telefono" class="form-control" placeholder="Telefono"
                         	value="<?php echo($fila['telefono']) ?>" required>
+                         <label class="hide" for="contrasena">Contraseña:</label>
                          <input type="password" id="contrasena" name="contrasena" class="form-control hide" placeholder="" 
                          	value="<?php echo($fila['contrasena'])?>" required>
+                        <label for="pass_1">Nueva Contraseña (opcional):</label>
                         <input type="password" id="pass_1" name="pass_1" class="form-control" placeholder="Nueva Contraseña" required>
+                        <label for="pass_2">Repita la nueva contraseña:</label>
                         <input type="password" id="pass_2" name="pass_2" class="form-control" placeholder="Repita la nueva contraseña" required>
                         <input type="button" name="modificar" class="btn btn-lg btn-success btn-block" style="margin-top:10px" id="Modificar" value="Modificar" onClick="javascript:enviar();">
                     </form>
