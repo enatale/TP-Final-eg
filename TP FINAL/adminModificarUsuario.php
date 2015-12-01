@@ -17,7 +17,11 @@
 				if(isset($_SESSION['usuario'])){
 					include("conexion.inc");
 					extract($_POST);
-					$usuario= $_SESSION['usuario'];
+					$usuario= $_POST['usuario'];
+					$nombre= $_POST['nombre'];
+					$apellido= $_POST['apellido'];
+					$contrasena= $_POST['contrasena'];
+					$telefono= $_POST['telefono'];
 					$vSql = "Update clientes set nombre='$nombre', apellido = '$apellido', contrasena = '$contrasena', telefono = '$telefono' where usuario = '$usuario'";
 					if(mysqli_query($link, $vSql)){
 						echo('<h1 style="text-align:center"> Las modificaciones se realizaron con éxito</h1><br />');
@@ -25,11 +29,8 @@
 					else{
 						echo('<h1 style="color:red; text-align:center"> Error al actualizar información en la base de datos</h1><br />');
 					}
-					echo('<p style="text-align:center"><a href="modificarcuenta.php"> Volver </a></p>');
-					mysqli_close($link);
-					$_SESSION['usuario'] = $usuario;
-					$_SESSION['apellido'] = $apellido;
-					$_SESSION['nombre'] = $nombre;				
+					echo('<p style="text-align:center"><a href="gestionarusuarios.php"> Volver </a></p>');
+					mysqli_close($link);			
 				} else {
 					echo('<h1 style="color:red"> DEBE ESTAR LOGUEADO PARA VER ESTA PÁGINA</h1>');
 				}

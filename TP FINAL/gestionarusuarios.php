@@ -12,6 +12,10 @@
 			$('#usuario').val(nombreUsuario);
 			document.formEliminar.submit();
 		}
+		function modificarCliente(nombreUsuario){
+			$('#usuario').val(nombreUsuario);
+			document.formModificar.submit();
+		}
 	</script>
   </head>
   <body>
@@ -52,6 +56,7 @@
 						  <th scope="col">Nombre</th>
 						  <th scope="col">Teléfono</th>
 						  <th scope="col">Usuario</th>
+						  <th scope="col">Contraseña</th>
 						  <th scope="col" style="border-top:hidden; border-right:hidden; border-bottom:hidden"></th>
 						</tr>
 					<?php
@@ -63,6 +68,10 @@
 							<td><?php echo ($fila['nombre']); ?></td>
 							<td><?php echo ($fila['telefono']); ?></td>
 							<td><?php echo ($fila['usuario']); ?></td>
+							<td><?php echo ($fila['contrasena']); ?></td>		
+							<td style="border-top:hidden; border-right:hidden; border-bottom:hidden">
+								<input type="button" class="btn btn-success" value="MODIFICAR" onClick="javascript:modificarCliente('<?php echo ($fila['usuario']) ?>');S" />
+							</td>
 							<td style="border-top:hidden; border-right:hidden; border-bottom:hidden">
 								<input type="button" class="btn btn-danger" value="ELIMINAR" onClick="javascript:eliminarCliente('<?php echo ($fila['usuario']) ?>');S" />
 							</td>
@@ -91,15 +100,14 @@
       </div>
      </div>
 
-    <form class="hidden" action="eliminarCliente.php" id="formEliminar" name="formEliminar" method="post">
+    <form class="hidden" action="adminModificarCuenta.php" id="formModificar" name="formModificar" method="post">
+    	<label for="usuario"><input type="text" id="usuario" name="usuario" /></label>
+    </form>
+	<form class="hidden" action="eliminarCliente.php" id="formEliminar" name="formEliminar" method="post">
     	<label for="usuario"><input type="text" id="usuario" name="usuario" /></label>
     </form>
     
-    <footer class="footer navbar-fixed-bottom">
-      <div class="container">
-        <p class="text-muted">Sociedad Italiana de Pujato General Armando Díaz - Dirección: J.R. Rodríguez 448 - Pujato, Santa Fe, Argentina - Telefono: (03464)-494636</p>
-      </div>      
-    </footer>
+    <?php include'pie.php';?>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>

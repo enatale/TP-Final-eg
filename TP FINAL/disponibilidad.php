@@ -14,7 +14,7 @@
       <div class="row row-centered">
           <div class="col-lg-6 col-centered">
 	
-	<form action="verdisponibilidad.php" method="post">
+			<form action="verdisponibilidad.php" method="post">
             <h1>Ingrese la fecha que desea ver si nuestras instalaciones están disponibles</h1>
            	<label for="dia" >Dia:</label>
             <input type="text" id="dia" name="dia" class="form-control" placeholder="Día" required autofocus>
@@ -22,22 +22,16 @@
             <input type="text" id="mes" name="mes" class="form-control" placeholder="Mes" required>
 		    <label for="anio">Año:</label>
             <input type="text" id="anio" name="anio" class="form-control" placeholder="Año" required>   
-
             <button class="btn btn-lg btn-success btn-block" type="submit" style="margin-top:10px">Ver disponibilidad</button>
- 
-    </form>
+  		    </form>
+			<p style="text-align:center; margin-top:20px"> Si usted desea reservar nuestras instalaciones, debe iniciar sesión con su usuario y contraseña. En caso de no tener usuario, puede registrarse en la sección "Iniciar sesión"</p>
 	     </div>
 	  </div>
 	</div>
 	
 	
 	
-    <footer class="footer navbar-fixed-bottom">
-      <div class="container">
-        <p class="text-muted">Sociedad Italiana de Pujato General Armando Díaz - Dirección: J.R. Rodríguez 448 - Pujato, Santa Fe, Argentina - Telefono: (03464)-494636</p>
-      </div>
-      
-    </footer>
+    <?php include'pie.php';?>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>

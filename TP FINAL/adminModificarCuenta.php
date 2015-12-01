@@ -17,15 +17,16 @@
 				<?php
 				if(isset($_SESSION['usuario'])){
 					include("conexion.inc");
-					$usuario= $_SESSION['usuario'];
+					
+					$usuario= $_POST['usuario'];
 					$vSql = "Select * from clientes where usuario='$usuario'";
 					$vResultado= mysqli_query($link, $vSql) or die(mysqli_error($link));
 					$fila = mysqli_fetch_array($vResultado);
 					?>
-                    <form action="modificarUsuario.php" method="post" name="formModificar" id="formModificar"  >
+                    <form action="adminModificarUsuario.php" method="post" name="formModificar" id="formModificar"  >
                         <h1>Ingrese sus datos:</h1>
                         <label for="usuario">Usuario:</label>
-                        <input type="text" id="usuario" name="usuario" class="form-control" placeholder="Usuario" disabled
+                        <input type="text" id="usuario" name="usuario" class="form-control" placeholder="Usuario"
                         	value="<?php echo($fila['usuario']) ?>" required autofocus>
                         <label for="nombre">Nombre:</label>
                         <input type="text" id="nombre" name="nombre" class="form-control" placeholder="Nombre" 
@@ -45,6 +46,7 @@
                         <input type="password" id="pass_2" name="pass_2" class="form-control" placeholder="Repita la nueva contraseña" required>
                         <input type="button" name="modificar" class="btn btn-lg btn-success btn-block" style="margin-top:10px" id="Modificar" value="Modificar" onClick="javascript:enviar();">
                     </form>
+					<p style="text-align:center; margin-top:5px"><a href="gestionarusuarios.php"> Volver a gestionar usuarios </a></p>
                     <?php
 					mysqli_free_result($vResultado);
 					mysqli_close($link);

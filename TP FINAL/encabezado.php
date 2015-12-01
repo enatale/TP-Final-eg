@@ -23,7 +23,7 @@
 								</li>
 							  </ul>
 				  <ul class="nav navbar-nav navbar-right">
-					<li><a href="index.html">Inicio</a></li>
+					<li><a href="index.php">Inicio</a></li>
 					<li><a href="galeria.php">Galería</a></li>
 					   <?php if(isset($_SESSION['usuario'])){ ?>
 							<li class="dropdown">

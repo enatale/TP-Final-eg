@@ -12,7 +12,7 @@
   <?php include'encabezado.php';?>
     <div id="galeria" class="container">
 		<div class="row row-centered">
-			<div class="col-lg-8 col-centered">
+			<div class="col-sm-8 col-centered">
             	<h1 style="text-align:center">Galería de imágenes</h1>
 				<div id="galeria_imagen"><img class="img-responsive" id="imgGaleria" src="imagenes/galeria/fachada1.jpg" alt="Imagen principal" /></div>
 					<div id="galeria_miniaturas">
@@ -37,11 +37,7 @@
 				</div>
 			</div>
 		</div>
-    <footer class="footer navbar-fixed-bottom">
-      <div class="container">
-        <p class="text-muted">Sociedad Italiana de Pujato General Armando Díaz - Dirección: J.R. Rodríguez 448 - Pujato, Santa Fe, Argentina - Telefono: (03464)-494636</p>
-      </div>
-    </footer>
+   <?php include'pie.php';?>
 
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>

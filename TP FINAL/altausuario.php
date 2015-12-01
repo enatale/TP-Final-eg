@@ -47,11 +47,7 @@
     </div>
     
     
-    <footer class="footer navbar-fixed-bottom">
-      <div class="container">
-        <p class="text-muted">Sociedad Italiana de Pujato General Armando Díaz - Dirección: J.R. Rodríguez 448 - Pujato, Santa Fe, Argentina - Telefono: (03464)-494636</p>
-      </div>
-    </footer>
+   <?php include'pie.php';?>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>

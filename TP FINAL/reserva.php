@@ -14,34 +14,24 @@
       <div class="row row-centered">
           <div class="col-lg-6 col-centered">
 	
-	<form action="hacerreserva.php" method="post">
+	        <form action="hacerreserva.php" method="post">
             <h3>Ingrese la fecha que desea reservar nuestras instalaciones</h3>
-			<label for="dia" class="sr-only">Dia</label>
+			<label for="dia" >Dia:</label>
             <input type="text" id="dia" name="dia" class="form-control" placeholder="Día" required autofocus>
-			<label for="mes" class="sr-only">Mes</label>
+			<label for="mes" >Mes:</label>
             <input type="text" id="mes" name="mes" class="form-control" placeholder="Mes" required>
-            <label for="anio" class="sr-only">Año</label>
+            <label for="anio">Año:</label>
             <input type="text" id="anio" name="anio" class="form-control" placeholder="Año" required>
-	
-			
-
-           
-
             <button class="btn btn-lg btn-success btn-block" type="submit" style="margin-top:10px">Reservar</button>
- 
-    </form>
+ 		    </form>
+            <p style="text-align:center; margin-top:20px"> Luego de realizada la reserva, usted deberá pagarla personalmente antes de la fecha solicitada en Simón de Iriondo 445, Pujato</p>
 	     </div>
 	  </div>
 	</div>
 	
 	
 	
-    <footer class="footer navbar-fixed-bottom">
-      <div class="container">
-        <p class="text-muted">Sociedad Italiana de Pujato General Armando Díaz - Dirección: J.R. Rodríguez 448 - Pujato, Santa Fe, Argentina - Telefono: (03464)-494636</p>
-      </div>
-      
-    </footer>
+    <?php include'pie.php';?>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>

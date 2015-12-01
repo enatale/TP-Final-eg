@@ -13,32 +13,26 @@
 	
     <div class="container">    
 			<div class="row row-centered">
-				<div class="col-md-6 col-centered"><h1 style="text-align:center">Como ubicar nuestras instalaciones:</h1></div> 
-			</div>        
-			<div class="row row-centered" >
-				<div class="col-md-6 col-centered"> <img class="img-responsive" src="imagenes/ubicacion/mapagrande.jpg" alt="Localizacion de Pujato"> </div>
-			</div>       
-			<div class="row row-centered" >
-			 <div class="col-md-6 col-centered"><p style="text-align:center">La localidad de pujato se encuentra sobre la ruta nacional N°33, aproximadamente a 40km de Rosario como se muestra en este mapa.</p></div>
-			</div>       
+				<div class="col-md-6 col-centered" style="text-align:center">
+				<h1>Cómo ubicarnos:</h1>
+				</div>
+			</div>
 			<div class="row row-centered">
-				 <div class="col-md-6 col-centered"> <img class="img-responsive" src="imagenes/ubicacion/mapachico.jpg" alt="Localizacion de S.I.G.A.D"> </div>       
-			</div>       
-        	<div class="row row-centered" >
-            	 <div class="col-md-6 col-centered">
-					<p style="text-align:center">Aquí se puede ver la ubicación de nuestras instalaciones dentro del pueblo.</p>
-  				 </div>
+				<div class="col-md-6 col-centered" style="text-align:center">
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3345.520649143354!2d-61.0362692363837!3d-33.01641109414812!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95b634ae5195b51b%3A0xc9718b9a22fb2ddd!2sSOCIEDAD+ITALIANA!5e0!3m2!1ses!2sar!4v1448979945567" width="500" height="450"  style="border:0" allowfullscreen></iframe>
+				</div> 
+   			</div>
+			<div class="row row-centered">
+				<div class="col-md-6 col-centered" style="text-align:center">
+				<p>La localidad de Pujato se encuentra aproximadamente a 40km de la ciudad de Rosario sobre la Ruta Nacional 33. En este mapa se muestra la ubicación de nuestras instalaciones</p>
+				</div>
    			</div>
     </div>
     
 	
     
     
-    <footer class="footer navbar-fixed-bottom">
-      <div class="container">
-        <p class="text-muted">Sociedad Italiana de Pujato General Armando Díaz - Dirección: J.R. Rodríguez 448 - Pujato, Santa Fe, Argentina - Telefono: (03464)-494636</p>
-      </div>
-    </footer>
+    <?php include'pie.php';?>
 
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
