@@ -17,18 +17,33 @@
           <div class="col-lg-6 col-centered">
           <form action="altausuario.php" method="post" name="formRegistro" id="formRegistro"  >
             <h1>Ingrese sus datos:</h1>
+            
             <label for="usuario">Usuario:</label>
             <input type="text" id="usuario" name="usuario" class="form-control" placeholder="Usuario" required autofocus>
+            <label for="usuario" style="color:red" id="msjUsuario"></label><br/>  
+                    
             <label for="contrasena">Contraseña:</label>
             <input type="password" id="pass_1" name="contrasena" class="form-control" placeholder="Contraseña" required>
+            <label for="contrasena" style="color:red" id="msjPass_1"></label><br/>
+            
             <label for="contrasena2">Repita la contraseña:</label>
             <input type="password" id="pass_2" name="contrasena2" class="form-control" placeholder="Repita la contraseña" required>
+            <label for="contrasena2" style="color:red" id="msjPass_2"></label><br/>
+            
             <label for="nombre">Nombre: </label>
             <input type="text" id="nombre" name="nombre" class="form-control" placeholder="Nombre" required>
+            <label for="nombre" style="color:red" id="msjNombre"></label><br/>
+            
             <label for="apellido">Apellido: </label>
             <input type="text" id="apellido" name="apellido" class="form-control" placeholder="Apellido" required>
+            <label for="apellido" style="color:red" id="msjApellido"></label><br/>
+            
+            
             <label for="telefono">Telefono: </label>
             <input type="text" id="telefono" name="telefono" class="form-control" placeholder="Telefono" required>
+            <label for="telefono" style="color:red" id="msjTelefono"></label><br/>
+            
+            
             <input type="button" name="registrar" class="btn btn-lg btn-success btn-block" style="margin-top:10px" id="registrar" value="Registrar" onClick="javascript:enviar();">
 
           </form>
