@@ -10,7 +10,7 @@
 			
 		function eliminarCliente(nombreUsuario){
 		    var cod = nombreUsuario;
-			$('#usuario').val(cod);
+			$('#usuarioEliminar').val(cod);			
 			document.formEliminar.submit();
 		}
 		
@@ -107,7 +107,7 @@
     	<label for="usuario"><input type="text" id="usuario" name="usuario" /></label>
     </form>
 	<form class="hidden" action="eliminarCliente.php" id="formEliminar" name="formEliminar" method="post">
-    	<label for="usuario"><input type="text" id="usuario" name="usuario" /></label>
+    	<label for="usuarioEliminar"><input type="text" id="usuarioEliminar" name="usuarioEliminar" /></label>
     </form>
     
     <?php include'pie.php';?>

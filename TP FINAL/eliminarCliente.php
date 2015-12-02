@@ -13,16 +13,16 @@
         <div class="row row-centered" style="text-align:center">
             <div class="col-lg-6 col-centered">
             	<?php
-					if(isset($_POST['usuario'])){
+					if(isset($_POST['usuarioEliminar'])){
 						extract($_POST);
 						include("conexion.inc");
 						/////////////////////////TRANSACCION SQL/////////////////////////////
 						$vSql = "SET AUTOCOMMIT=0;";
 						mysqli_query($link, $vSql);
-						$vSql = "Delete from reservas where usuario = '$usuario'";
+						$vSql = "Delete from reservas where usuario = '$usuarioEliminar'";
 						$vResultado = mysqli_query($link, $vSql);
 						if($vResultado){
-							$vSql = "Delete from clientes where usuario = '$usuario'";
+							$vSql = "Delete from clientes where usuario = '$usuarioEliminar'";
 							$vResultado = mysqli_query($link, $vSql);
 							if($vResultado){
 								$vSql = "commit;";
