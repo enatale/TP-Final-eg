@@ -31,7 +31,11 @@
 							$_SESSION['apellido'] = $fila['apellido'];
 							mysqli_free_result($resultado);
 							mysqli_close($link);
-							header('Location: reserva.php');
+							if($_SESSION['usuario']=='administrador'){
+								header('Location:adminInicio.php');
+							} else {
+								header('Location: reserva.php');
+							}
 						}
 						else{
 							//echo("<h3> Usuario y/o contraseña incorrecto/s </h3><br />");
