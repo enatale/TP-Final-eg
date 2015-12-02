@@ -9,11 +9,14 @@
     <script type="text/jscript">
 			
 		function eliminarCliente(nombreUsuario){
-			$('#usuario').val(nombreUsuario);
+		    var cod = nombreUsuario;
+			$('#usuario').val(cod);
 			document.formEliminar.submit();
 		}
+		
 		function modificarCliente(nombreUsuario){
-			$('#usuario').val(nombreUsuario);
+			var cod = nombreUsuario;
+			$('#usuario').val(cod);
 			document.formModificar.submit();
 		}
 	</script>
@@ -73,7 +76,7 @@
 								<input type="button" class="btn btn-success" value="MODIFICAR" onClick="javascript:modificarCliente('<?php echo ($fila['usuario']) ?>');S" />
 							</td>
 							<td style="border-top:hidden; border-right:hidden; border-bottom:hidden">
-								<input type="button" class="btn btn-danger" value="ELIMINAR" onClick="javascript:eliminarCliente('<?php echo ($fila['usuario']) ?>');S" />
+								<input type="button" class="btn btn-danger" value="ELIMINAR" onClick="javascript:eliminarCliente('<?php echo ($fila['usuario'])?>');S" />
 							</td>
 						</tr>
 					<?php

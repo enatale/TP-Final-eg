@@ -26,8 +26,14 @@
                     <form action="adminModificarUsuario.php" method="post" name="formModificar" id="formModificar"  >
                         <h1>Ingrese sus datos:</h1>
                         <label for="usuario">Usuario:</label>
-                        <input type="text" id="usuario" name="usuario" class="form-control" placeholder="Usuario"
+                        <input type="text" id="user" name="user" class="form-control" placeholder="Usuario" disabled
                         	value="<?php echo($fila['usuario']) ?>" required autofocus>
+							
+						<label class="hide" for="usuario">Usuario:</label>
+                         <input type="text" id="usuario" name="usuario" class="form-control hide" placeholder="" 
+                         	value="<?php echo($fila['usuario'])?>" required>	
+							
+							
                         <label for="nombre">Nombre:</label>
                         <input type="text" id="nombre" name="nombre" class="form-control" placeholder="Nombre" 
                         	value="<?php echo($fila['nombre']) ?>" required>
