@@ -4,7 +4,7 @@ function validarUsuario() {
 	if(usuario==""){
 		$('#usuario').attr('style', 'background:#FF4A4A; color:white');
 		$('#msjUsuario').append('Este campo es obligatorio');
-		return false
+		return false;
 	} else {
 		if (!usuario.match(/^[a-z0-9][a-z0-9_]{3,9}$/)){
 			$('#usuario').attr('style', 'background:#FF4A4A; color:white');
@@ -54,7 +54,7 @@ function validarPass_2(){
 			return false;
 		}
 	}
-	return false;
+	return true;
 }
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -105,9 +105,26 @@ function validarTelefono() {
 		$('#msjTelefono').append('Este campo es obligatorio');
 		return false;
 	} else {
-		if(!telefono.match(/^[0-9\-]{7,20}$/)){
+		if(!telefono.match(/^[0-9\-]{5,20}$/)){
 			$('#telefono').attr('style', 'background:#FF4A4A; color:white');
-			$('#msjTelefono').append('El telefono debe estar formado por entre 7 y 20 y se aceptan números y guiones medios');
+			$('#msjTelefono').append('El telefono debe estar formado por entre 5 y 20 y se aceptan números y guiones medios');
+			return false;
+		}
+	}
+	return true;
+}
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+function validarEmaill() {
+	$('#msjEmail').empty();
+	var email = $('#email').val();
+	if(email==""){
+		$('#email').attr('style', 'background:#FF4A4A; color:white');
+		$('#msjEmail').append('Este campo es obligatorio');
+		return false;
+	} else {
+		if(!email.match(/^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,3})$/)){
+			$('#email').attr('style', 'background:#FF4A4A; color:white');
+			$('#msjEmail').append('El mail ingresado no es válido');
 			return false;
 		}
 	}
@@ -126,12 +143,21 @@ function enviar() {
 	if(!validarTelefono()){ continua = false; }
 	if(!validarPass_1()){ continua = false; }
 	if(!validarPass_2()){ continua = false; }
+	if(!validarEmaill()){ continua = false; }
 	
 	if(continua){ document.formRegistro.submit(); }
 }
 //////////////////////////////////////////////////////////////////////////////////////
 
 $(function(){
+//CUANDO SE PRESIONA ENTER SE ENVIA EL FORMULARIO
+	$(document).keypress(function(e) {
+		if(e.keyCode=='13'){
+			enviar();
+		}
+	});
+	
+	
 //PONE EN BLANCO UN CAMPO CUANDO SE EMPIEZA A ESCRIBIR EN ÉL
 	$('#pass_1').keyup(function(){ $('#pass_1').attr('style', 'background:white'); });
 	$('#pass_2').keyup(function(){ $('#pass_2').attr('style', 'background:white'); });
@@ -139,6 +165,7 @@ $(function(){
 	$('#nombre').keyup(function(){ $('#nombre').attr('style', 'background:white'); });
 	$('#usuario').keyup(function(){ $('#usuario').attr('style', 'background:white'); });
 	$('#telefono').keyup(function(){ $('#telefono').attr('style', 'background:white'); });
+	$('#email').keyup(function(){ $('#email').attr('style', 'background:white'); });
 
 //HACE LAS VALIDACIONES CUANDO SE CAMBIA EL FOCO DE LOS CONTROLES
 	$('#usuario').focusout(function() { validarUsuario(); });
@@ -147,4 +174,5 @@ $(function(){
 	$('#nombre').focusout(function() { validarNombre(); });
 	$('#apellido').focusout(function() { validarApellido(); });
 	$('#telefono').focusout(function() { validarTelefono(); });
+	$('#email').focusout(function() { validarEmaill(); });
 });

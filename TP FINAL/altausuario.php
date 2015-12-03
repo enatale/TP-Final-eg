@@ -14,12 +14,12 @@
       <div class="row row-centered">
           <div class="col-lg-6 col-centered text-center">
 			    <?php
-                
 				$usuario= $_POST['usuario'];
 				$contrasena= $_POST['contrasena'];
 				$nombre= $_POST['nombre'];
 				$apellido= $_POST['apellido'];
 				$telefono= $_POST['telefono'];
+				$email = $_POST['email'];
                 
 				include("conexion.inc");
 				$vSql = "SELECT Count(usuario) FROM clientes WHERE usuario='$usuario'";		
@@ -30,14 +30,14 @@
                  echo ("<a href='registrar.php'>Volver al registro</a>");
                 }
                 else {
-                $vSql = "INSERT INTO clientes (usuario, contrasena, nombre, apellido, telefono)
-                values ('$usuario', '$contrasena', '$nombre', '$apellido', '$telefono')";
-                mysqli_query($link,$vSql) or die (mysqli_error($link));
-				$_SESSION['usuario']=$usuario;
-				$_SESSION['nombre']=$nombre;
-				$_SESSION['apellido']=$apellido;
-                echo("<h1>El Usuario fue registrado correctamente<br></h1>");
-                echo ("<a href='reserva.php'>Ir a reservas</a>");
+					$vSql = "INSERT INTO clientes (usuario, contrasena, nombre, apellido, telefono, email)
+					values ('$usuario', '$contrasena', '$nombre', '$apellido', '$telefono', '$email')";
+					mysqli_query($link,$vSql) or die (mysqli_error($link));
+					$_SESSION['usuario']=$usuario;
+					$_SESSION['nombre']=$nombre;
+					$_SESSION['apellido']=$apellido;
+					echo("<h1>El Usuario fue registrado correctamente<br></h1>");
+					echo ("<a href='reserva.php'>Ir a reservas</a>");
                 }
                 mysqli_close($link);
                 ?>

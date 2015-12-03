@@ -16,7 +16,7 @@
 				 <?php
                             $fecha=date("d-m-Y");
                             $hora=date("H :i:s");
-                            $destinatario= "esteban.natale@yahoo.com.ar";
+                            $destinatario= "info@sociedaditaliana.net23.net";
                             $remitente='From:' .$_POST['remitente'];
                             $cuerpo="
                                     \n
@@ -30,7 +30,12 @@
                             $asunto="Comentario";
                             if(mail($destinatario,$asunto,$cuerpo,$remitente)){?>                            
                   			<h1>Su consulta ha sido enviada en breve recibira nuestra respuesta</h1>
-                  			<?php }
+                  			<?php
+								$respuesta = "El mail de consulta que ha enviado desde la página de la Sociedad Italiana de Pujato fue enviado correctamente. En breve responderemos a su consulta.";
+								$remitente2 ='From:' .$destinatario;
+								$destinatario2 = $_POST['remitente'];
+								mail($destinatario2,"Mail de consulta enviado",$respuesta,$remitente2);
+							}
 							else{
 				  			?>
                             <h1 style="color:red">ERROR AL ENVIAR CONSULTA</h1>

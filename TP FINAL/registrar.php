@@ -43,6 +43,10 @@
             <input type="text" id="telefono" name="telefono" class="form-control" placeholder="Telefono" required>
             <label for="telefono" style="color:red" id="msjTelefono"></label><br/>
             
+            <label for="email">E-mail: </label>
+            <input type="text" id="email" name="email" class="form-control" placeholder="E-mail" required>
+            <label for="email" style="color:red" id="msjEmail"></label><br/>
+            
             
             <input type="button" name="registrar" class="btn btn-lg btn-success btn-block" style="margin-top:10px" id="registrar" value="Registrar" onClick="javascript:enviar();">
 

@@ -12,22 +12,13 @@
 	session_start();
 	if(isset($_SESSION['usuario'])&&$_SESSION['usuario']=='administrador'){
 		include('adminEncabezado.php');?>
-		 
-	
-
-<div class="container">
-    	<div class="row row-centered">
-        	<div class="col-md-10 col-centered">
-			
- <h2 style="text-align:center">Usted se ha logueado como administrador, elija una de las opciones en el menú para gestionar usuarios o reservas</h2>
-            
-            </div>		
+        <div class="container">
+                <div class="row row-centered">
+                    <div class="col-md-10 col-centered">
+                        <h2 style="text-align:center">Usted se ha logueado como administrador, elija una de las opciones en el menú para gestionar usuarios o reservas</h2>
+                    </div>		
+                </div>
         </div>
-</div>
-
-
-
-
 <?php }
 	else {
 		echo('<h1 style="color:red;text-align:center"> PARA VER ESTA PÁGINA DEBE ESTAR LOGUEADO COMO ADMINISTRADOR</h1>');
