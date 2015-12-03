@@ -23,49 +23,54 @@
 	
 		   
 		   			<?php
-					include("conexion.inc");
-					$usuario=$_SESSION['usuario'];
-					$vSql = "SELECT * FROM reservas WHERE usuario='$usuario'";
-					$vResultado = mysqli_query($link,$vSql);
-					$cantidadReservas=mysqli_num_rows($vResultado);
-					if ($cantidadReservas>0)
-					{
-						echo("<h1>Estas son sus reservas actuales:</h1><br />");
-						$vSql2= "SELECT * FROM clientes WHERE usuario='$usuario'";
-						$vResultado2= mysqli_query($link,$vSql2); 
-						?>
-						<table class="table table-bordered">
-						  <tbody>
-							<tr>
-							  <th scope="col">Día</th>
-							  <th scope="col">Nombre y apellido</th>
-							  <th scope="col">Estado</th>
-							  <th scope="col" style="border-top:hidden; border-right:hidden; border-bottom:hidden"></th>
-							</tr>
-						<?php
-						$fila2= mysqli_fetch_array($vResultado2);
-						while ($fila = mysqli_fetch_array($vResultado))
-						{
-							$fecha=$fila['dia'];
-							$fechaordenada=substr($fecha, 8).'-'.substr($fecha,5 ,2).'-'.substr($fecha, 0, 4);
-							?>
-								<tr>
-									<td><?php echo ($fechaordenada); ?></td>
-									<td><?php echo ($fila2['nombre'].' '.$fila2['apellido']); ?></td>
-									<td><?php echo ($fila['estado']); ?></td>
-									<td style="border-top:hidden; border-right:hidden; border-bottom:hidden">
-										<input type="button" class="btn btn-danger" value="Eliminar" onClick="javascript:eliminarReserva(<?php echo($fila['codigo'])?>);" />
-									</td>
-								</tr>
-							<?php
-						}
-						echo("</tbody></table>");
-						mysqli_free_result($vResultado);
-						mysqli_close($link);
+					if(isset ($_SESSION['usuario'])){
+							include("conexion.inc");
+							$usuario=$_SESSION['usuario'];
+							$vSql = "SELECT * FROM reservas WHERE usuario='$usuario'";
+							$vResultado = mysqli_query($link,$vSql);
+							$cantidadReservas=mysqli_num_rows($vResultado);
+							if ($cantidadReservas>0)
+							{
+								echo("<h1>Estas son sus reservas actuales:</h1><br />");
+								$vSql2= "SELECT * FROM clientes WHERE usuario='$usuario'";
+								$vResultado2= mysqli_query($link,$vSql2); 
+								?>
+								<table class="table table-bordered">
+								  <tbody>
+									<tr>
+									  <th scope="col">Día</th>
+									  <th scope="col">Nombre y apellido</th>
+									  <th scope="col">Estado</th>
+									  <th scope="col" style="border-top:hidden; border-right:hidden; border-bottom:hidden"></th>
+									</tr>
+								<?php
+								$fila2= mysqli_fetch_array($vResultado2);
+								while ($fila = mysqli_fetch_array($vResultado))
+								{
+									$fecha=$fila['dia'];
+									$fechaordenada=substr($fecha, 8).'-'.substr($fecha,5 ,2).'-'.substr($fecha, 0, 4);
+									?>
+										<tr>
+											<td><?php echo ($fechaordenada); ?></td>
+											<td><?php echo ($fila2['nombre'].' '.$fila2['apellido']); ?></td>
+											<td><?php echo ($fila['estado']); ?></td>
+											<td style="border-top:hidden; border-right:hidden; border-bottom:hidden">
+												<input type="button" class="btn btn-danger" value="Eliminar" onClick="javascript:eliminarReserva(<?php echo($fila['codigo'])?>);" />
+											</td>
+										</tr>
+									<?php
+								}
+								echo("</tbody></table>");
+								mysqli_free_result($vResultado);
+								mysqli_close($link);
+							}
+							else{
+								echo("<h1> Usted no posee reservas actualmente</h1><br />");
+								echo("<a href='reserva.php'>Ir a reservar instalaciones</a>");
+							}
 					}
 					else{
-						echo("<h1> Usted no posee reservas actualmente</h1><br />");
-						echo("<a href='reserva.php'>Ir a reservar instalaciones</a>");
+					echo('<h1 style="color:red"> DEBE ESTAR LOGUEADO PARA VER ESTA PÁGINA</h1>');
 					}
 					?>
 					

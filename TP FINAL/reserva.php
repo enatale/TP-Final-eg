@@ -13,7 +13,8 @@
 	<div class="container">
       <div class="row row-centered">
           <div class="col-lg-6 col-centered">
-	
+	      <?php
+				if(isset ($_SESSION['usuario'])){?>
 	        <form action="hacerreserva.php" method="post">
             <h3>Ingrese la fecha que desea reservar nuestras instalaciones</h3>
 			<label for="dia" >Dia:</label>
@@ -24,7 +25,12 @@
             <input type="text" id="anio" name="anio" class="form-control" placeholder="Año" required>
             <button class="btn btn-lg btn-success btn-block" type="submit" style="margin-top:10px">Reservar</button>
  		    </form>
-            <p style="text-align:center; margin-top:20px"> Luego de realizada la reserva, usted deberá pagarla personalmente antes de la fecha solicitada en Simón de Iriondo 445, Pujato</p>
+		    <p style="text-align:center; margin-top:20px"> Luego de realizada la reserva, usted deberá pagarla personalmente antes de la fecha solicitada en Simón de Iriondo 445, Pujato</p>
+			<?php }
+			else{
+			echo('<h1 style="color:red"> DEBE ESTAR LOGUEADO PARA VER ESTA PÁGINA</h1>');
+			}?>
+
 	     </div>
 	  </div>
 	</div>

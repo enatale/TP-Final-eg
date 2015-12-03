@@ -32,7 +32,7 @@
 					echo('<p style="text-align:center"><a href="gestionarusuarios.php"> Volver </a></p>');
 					mysqli_close($link);			
 				} else {
-					echo('<h1 style="color:red"> DEBE ESTAR LOGUEADO PARA VER ESTA PÁGINA</h1>');
+					echo('<h1 style="color:red"> DEBE ESTAR LOGUEADO COMO ADMINISTRADOR PARA VER ESTA PÁGINA</h1>');
 				}
                 ?>
           </div>
