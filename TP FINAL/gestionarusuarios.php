@@ -65,6 +65,7 @@
 						  <th scope="col">Teléfono</th>
 						  <th scope="col">Usuario</th>
 						  <th scope="col">Contraseña</th>
+                          <th scope="col">E-mail</th>
 						  <th scope="col" style="border-top:hidden; border-right:hidden; border-bottom:hidden"></th>
 						</tr>
 					<?php
@@ -76,7 +77,8 @@
 							<td><?php echo ($fila['nombre']); ?></td>
 							<td><?php echo ($fila['telefono']); ?></td>
 							<td><?php echo ($fila['usuario']); ?></td>
-							<td><?php echo ($fila['contrasena']); ?></td>		
+							<td><?php echo ($fila['contrasena']); ?></td>
+                            <td><?php echo ($fila['email']); ?></td>		
 							<td style="border-top:hidden; border-right:hidden; border-bottom:hidden">
 								<input type="button" class="btn btn-success" value="MODIFICAR" onClick="javascript:modificarCliente('<?php echo ($fila['usuario']) ?>');S" />
 							</td>

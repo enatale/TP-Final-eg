@@ -18,7 +18,7 @@
 					include("conexion.inc");
 					extract($_POST);
 					$usuario= $_SESSION['usuario'];
-					$vSql = "Update clientes set nombre='$nombre', apellido = '$apellido', contrasena = '$contrasena', telefono = '$telefono' where usuario = '$usuario'";
+					$vSql = "Update clientes set nombre='$nombre', apellido = '$apellido', contrasena = '$contrasena', telefono = '$telefono', email='$email' where usuario = '$usuario'";
 					if(mysqli_query($link, $vSql)){
 						echo('<h1 style="text-align:center"> Las modificaciones se realizaron con éxito</h1><br />');
 					}
