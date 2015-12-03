@@ -20,90 +20,115 @@
                   <tr>
                     <th>Cargo</th>
                     <th>Nombre y Apellido</th>
+					<th>Email de contacto</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
                     <td>Presidente</td>
                     <td>Primo Enrique Giacomozzi</td>
+					<td>No posee</td>
                   </tr>
                   <tr>
                     <td>Vice-Presidente 1°</td>
                     <td>Abel José Cuccioletta</td>
+					<td>abelcuccioleta@gmail.com</td>
                   </tr>
                   <tr>
                     <td>Vice-Presidente 2°</td>
                     <td>Emilio Alberto Marozzi</td>
+					<td>emiliomarozzi@gmail.com</td>
                   </tr>
                   <tr>
                     <td>Secretario</td>
                     <td>Osvaldo Stroppiana</td>
+					<td>osvaldostroppiana@hotmail.com</td>
                   </tr>
                   <tr>
                     <td>Pro-secretario</td>
                     <td>Daniel Eldo Sfrédola</td>
+					<td>No posee</td>
                   </tr>
                   <tr>
                     <td>Tesorero</td>
                     <td>Osvaldo Vicente Screpanti</td>
+					<td>No posee</td>
                   </tr><tr>
                     <td>Pro-tesorero</td>
                     <td>Higinio Agustín Fagiani</td>
+					<td>No posee</td>
                   </tr>
                   <tr>
                     <td rowspan="8">Vocales titulares</td>
                     <td>Adrían Fernando Leporatti</td>
+					<td>adrianleporatti@gmail.com</td>
                   </tr>
                   <tr>
                     <td>Jorge Omar Gabrieli</td>
+					<td>No posee</td>
                   </tr>
                   <tr>
                     <td>Gustavo Arsenio Sanmarti</td>
+					<td>No posee</td>
                   </tr>
                   <tr>
                     <td>Miguel Ángel Mandolesi</td>
+					<td>No posee</td>
                   </tr>
                   <tr>
                     <td>Sergio Félix Quacquarini</td>
+					<td>sfquacquarini@hotmail.com</td>
                   </tr>
                   <tr>
                     <td>Julio Gofiar</td>
+					<td>juliogofiar@yahoo.com.ar</td>
                   </tr>
                   <tr>
                     <td>Raúl José Caffaratti</td>
+					<td>raulcaffa@hotmail.com</td>
                   </tr>
                   <tr>
                     <td>Rubén Gregorio Zamora</td>
+					<td>No posee</td>
                   </tr>
                   <tr>
                     <td rowspan="4">Vocales Suplentes</td>
                     <td>César Luis Quiroga</td>
+					<td>No posee</td>
                   </tr>
                   <tr>
                     <td>Guillermo Hernán Foco</td>
+					<td>No posee</td>
                   </tr>
                   <tr>
                     <td>Raúl Alberto Giachetta</td>
+					<td>raulgiachetta@gmail.com</td>
                   </tr>
                   <tr>
                     <td>Elsa Noemi Rafaelli</td>
+					<td>No posee</td>
                   </tr>
                   <tr>
                     <td rowspan="3">Síndicos titulares</td>
                     <td>José Alberto S. Quacquarini</td>
+					<td>No posee</td>
                   </tr>
                   <tr>
                     <td>Luis Nazareno Callarelli</td>
+					<td>No posee</td>
                   </tr>
                   <tr>
                     <td>Juan Exequiel Marcetti</td>
+					<td>juanimarcetti@gmail.com</td>
                   </tr>
                   <tr>
                     <td rowspan="2">Síndicos suplentes</td>
                     <td>Elbio Alberto Giacomozzi</td>
+					<td>No posee</td>
                   </tr>
                   <tr>
                     <td>Enzo Dichiara</td>
+					<td>No posee</td>
                   </tr>
                   
                   

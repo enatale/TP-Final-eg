@@ -57,7 +57,7 @@
 					mysqli_free_result($vResultado);
 					mysqli_close($link);
 				} else {
-					echo('<h1 style="color:red"> DEBE ESTAR LOGUEADO PARA VER ESTA PÁGINA</h1>');
+					echo('<h1 style="color:red"> DEBE ESTAR LOGUEADO COMO ADMINISTRADOR PARA VER ESTA PÁGINA</h1>');
 				}
 				
                 ?>
