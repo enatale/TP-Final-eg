@@ -19,6 +19,7 @@
 						$anio= $_POST['anio'];
 						$mes = $_POST['mes'];
 						$dia = $_POST['dia'];
+						$usuario=$_SESSION['usuario'];
 						$fecha= $anio."-".$mes."-".$dia;
 						$hoy=date("Y-m-d");
 						if($mes>'12' or $dia>'31' or ($dia>'30' and ($mes=='4' or $mes=='6' or $mes=='9' or $mes=='11')) or ($dia>'28' and $mes=='2')  or !is_numeric ($anio) or !is_numeric ($mes) or !is_numeric ($dia) or $anio>'3000'){
@@ -40,8 +41,8 @@
 									echo("<a href='adminReserva.php'>Volver</a>");
 								}
 								else{
-									$vSql = "INSERT INTO reservas (dia, estado)
-									values ('$fecha', 'Pendiente')";
+									$vSql = "INSERT INTO reservas (dia, estado, usuario)
+									values ('$fecha', 'Pendiente','$usuario')";
 									mysqli_query($link,$vSql) or die (mysqli_error($link));
 									echo("<h1> La reserva se ha realizado con éxito </h1><br />");
 									echo("<a href='gestionarreservas.php'>Ir a reservas</a>");
