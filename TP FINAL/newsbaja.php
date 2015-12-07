@@ -15,19 +15,17 @@
           <div class="col-lg-6 col-centered text-center">
 			    <?php            
 				include("conexion.inc");
-				$mail=$_POST['email'];
-				$vSql = "SELECT Count(direccion) FROM mailboletin WHERE direccion='$mail'";		
+				$mail=$_POST['emailb'];
+				$vSql = "DELETE FROM mailboletin WHERE direccion='$mail'";		
                 $vResultado = mysqli_query($link,$vSql) or die (mysqli_error($link));		
-                $vCantUsuarios = mysqli_fetch_row($vResultado);	
-                if ($vCantUsuarios[0] != 0){
-                 echo ("<h1>El mail ya esta suscripto<br></h1>");
+				
+                if ($vResultado){
+                 echo ("<h1>El mail se dio de baja correctamente<br></h1>");
                  echo ("<a href='news.php'>Volver a la suscripcion</a>");
                 }
                 else {
-                $vSql = "INSERT INTO mailboletin (direccion) values ('$mail')";
-                mysqli_query($link,$vSql) or die (mysqli_error($link));
-                echo("<h1>Suscripción realizada correctamente<br></h1>");
-                echo ("<a href='index.php'>Ir al inicio</a>");
+                echo("<h1>No pudo darse de baja el e-mail<br></h1>");
+                echo ("<a href='news.php'>Volver a la suscripcion</a>");
                 }
                 mysqli_close($link);
                 ?>

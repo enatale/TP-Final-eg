@@ -32,17 +32,17 @@
                   <tr>
                     <td>Vice-Presidente 1°</td>
                     <td>Abel José Cuccioletta</td>
-					<td>abelcuccioleta@gmail.com</td>
+					<td><a href="mailto:abelcuccioleta@gmail.com">abelcuccioleta@gmail.com</a></td>
                   </tr>
                   <tr>
                     <td>Vice-Presidente 2°</td>
                     <td>Emilio Alberto Marozzi</td>
-					<td>emiliomarozzi@gmail.com</td>
+					<td><a href="mailto:emiliomarozzi@gmail.com">emiliomarozzi@gmail.com</a></td>
                   </tr>
                   <tr>
                     <td>Secretario</td>
                     <td>Osvaldo Stroppiana</td>
-					<td>osvaldostroppiana@hotmail.com</td>
+					<td><a href="mailto:osvaldostroppiana@hotmail.com">osvaldostroppiana@hotmail.com</a></td>
                   </tr>
                   <tr>
                     <td>Pro-secretario</td>
@@ -61,7 +61,7 @@
                   <tr>
                     <td rowspan="8">Vocales titulares</td>
                     <td>Adrían Fernando Leporatti</td>
-					<td>adrianleporatti@gmail.com</td>
+					<td><a href="mailto:adrianleporatti@gmail.com">adrianleporatti@gmail.com</a></td>
                   </tr>
                   <tr>
                     <td>Jorge Omar Gabrieli</td>
@@ -77,15 +77,15 @@
                   </tr>
                   <tr>
                     <td>Sergio Félix Quacquarini</td>
-					<td>sfquacquarini@hotmail.com</td>
+					<td><a href="mailto:sfquacquarini@hotmail.com">sfquacquarini@hotmail.com</a></td>
                   </tr>
                   <tr>
                     <td>Julio Gofiar</td>
-					<td>juliogofiar@yahoo.com.ar</td>
+					<td><a href="mailto:juliogofiar@yahoo.com.ar">juliogofiar@yahoo.com.ar</a></td>
                   </tr>
                   <tr>
                     <td>Raúl José Caffaratti</td>
-					<td>raulcaffa@hotmail.com</td>
+					<td><a href="mailto:raulcaffa@hotmail.com">raulcaffa@hotmail.com</a></td>
                   </tr>
                   <tr>
                     <td>Rubén Gregorio Zamora</td>
@@ -102,7 +102,7 @@
                   </tr>
                   <tr>
                     <td>Raúl Alberto Giachetta</td>
-					<td>raulgiachetta@gmail.com</td>
+					<td><a href="mailto:raulgiachetta@gmail.com">raulgiachetta@gmail.com</a></td>
                   </tr>
                   <tr>
                     <td>Elsa Noemi Rafaelli</td>
@@ -119,7 +119,7 @@
                   </tr>
                   <tr>
                     <td>Juan Exequiel Marcetti</td>
-					<td>juanimarcetti@gmail.com</td>
+					<td><a href="mailto:juanimarcetti@gmail.com">juanimarcetti@gmail.com</a></td>
                   </tr>
                   <tr>
                     <td rowspan="2">Síndicos suplentes</td>

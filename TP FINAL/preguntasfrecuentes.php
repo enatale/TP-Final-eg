@@ -14,7 +14,7 @@
            <div class="col-lg-6 col-centered">  
 				   <h1 style="text-align:center">Preguntas frecuentes:</h1> 
 				   <h3>¿Cuanto cuesta el alquiler del salon actualmente?</h3>
-				   <p> El alquiler del salon cuesta $4000 (Cuatro mil pesos Argentinos) más impuestos de SADAIC (Sociedad Argentina de Autores y Compositores de Música) y AADI CAPIF (Interpretes y Productores Fonográficos). Este precio esta sujeto a modificaciones que serán informados a través de nuestro <a href="news.php"> Boletín de noticias </a></p>
+				   <p> El alquiler del salon cuesta $5000 (Cuatro mil pesos Argentinos) más impuestos de SADAIC (Sociedad Argentina de Autores y Compositores de Música) y AADI CAPIF (Interpretes y Productores Fonográficos). Este precio esta sujeto a modificaciones que serán informados a través de nuestro <a href="news.php"> Boletín de noticias </a></p>
 				   <h3>¿Qué métodos de pago son aceptados?</h3>
 				   <p> Actualmente sólamente se acepta el pago en efectivo, en una única entrega o varias, hasta un máximo de 4</p> 
 				   <h3>¿Donde se encuentran las instalaciones?</h3>
@@ -23,8 +23,9 @@
 				   <p> Para poder reservarlo, usted puede hacerlo personalmente en Simón de Iriondo 445, Pujato o através de este sitio web debe registrarse en <a href="registrar.php"> Registrarse </a>(si todavía no posee una cuenta) y luego una vez iniciado sesión ir al apartado de reservas <a href="reserva.php"> (Reservar) </a></p>	   
 				   <h3>¿Donde y cuando debo pagar el monto del alquiler del salon?</h3>
 				   <p> Usted debe pagar el alquiler personalmente en Simon de Iriondo 445, Pujato, un día antes de la fecha de uso del salón o antes.</p>				   
-				   <h3></h3>
-				   <p></p>
+				   <h3>¿La limpieza está incluida en el precio del salón?</h3>
+				   <p> Si, usted no deberá pagar un monto extra por la limpieza.</p>
+
            </div>     
         </div>
     </div>

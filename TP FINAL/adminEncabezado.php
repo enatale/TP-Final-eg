@@ -14,7 +14,8 @@
 							  </ul>
 				  <ul class="nav navbar-nav navbar-right">
 					<li><a href="gestionarusuarios.php">Gestionar Usuarios</a></li>
-					<li><a href="gestionarreservas.php">Gestionar reservas</a></li>		
+					<li><a href="gestionarreservas.php">Gestionar reservas</a></li>
+                    <li><a href="adminBoletinNoticias.php">Boletín de noticias</a></li>			
                     <li><a href="cerrarsesion.php">Cerrar sesión</a></li>
 				  </ul>
 			   </div>

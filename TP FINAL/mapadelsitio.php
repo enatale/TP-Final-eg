@@ -33,6 +33,7 @@
 							<li><a href="iniciarsesion.php">Inciar sesión</a></li>
 					 <?php } ?>
               <li><a href="preguntasfrecuentes.php">Preguntas frecuentes</a></li>
+              <li><a href="news.php">Suscripcion al boletín de noticias</a></li>
            </div>     
         </div>
     </div>

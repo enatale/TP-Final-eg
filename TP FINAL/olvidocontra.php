@@ -13,15 +13,17 @@
     <div class="container">
       <div class="row row-centered">
           <div class="col-lg-6 col-centered">
-          <form action="login.php" method="post">
-            <h1>Ingrese sus datos de usuario:</h1>
+          <form action="enviarcontra.php" method="post">
+            <h1>Ingrese su usuario e e-mail. Recibira un correo con su contraseña:</h1>
             <label for="usuario">Usuario:</label>
             <input type="text" id="usuario" name="usuario" class="form-control" placeholder="Usuario" required autofocus>
-            <label for="contraseña">Contraseña:</label>
-            <input type="password" id="contraseña" name="contraseña" class="form-control" placeholder="Contraseña" required>
-            <p><a href=olvidocontra.php> ¿Ha olvidado su contraseña? </a></p>
-            <button class="btn btn-lg btn-success btn-block" type="submit" style="margin-top:10px">Iniciar sesión</button>
-            <a class="btn btn-lg btn-success btn-block" href="registrar.php">Registrarse</a>
+            <label for="email" style="margin-top:10px;">E-mail: </label>          
+            <input type="email" id="email" name="email" class="form-control" placeholder="E-mail" required>
+    
+
+            <button class="btn btn-lg btn-success btn-block" type="submit" style="margin-top:10px">Enviar</button>
+            
+            <p style="font-size:16px; margin-top:10px"> En caso de no poder solucionar su problema, por favor <a href="contacto.php">comuníquese con nosotros</a></p>
           </form>
           </div>
       </div>
@@ -38,3 +40,21 @@
     <script src="bootstrap/js/bootstrap.min.js"></script>
   </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -15,7 +15,7 @@
         <div class="container">
                 <div class="row row-centered">
                     <div class="col-md-10 col-centered">
-                        <h2 style="text-align:center">Usted se ha logueado como administrador, elija una de las opciones en el menú para gestionar usuarios o reservas</h2>
+                        <h2 style="text-align:center">Usted se ha logueado como administrador, elija una de las opciones en el menú para gestionar usuarios y reservas o escribir un nuevo boletín de noticias</h2>
                     </div>		
                 </div>
         </div>
