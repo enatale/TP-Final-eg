@@ -16,25 +16,8 @@
 					if(isset($_POST['mailEliminar'])){
 						extract($_POST);
 						include("conexion.inc");
-						/////////////////////////TRANSACCION SQL/////////////////////////////
-						$vSql = "SET AUTOCOMMIT=0;";
+						$vSql = "Delete from mailboletin where direccion = '$mailEliminar'";
 						mysqli_query($link, $vSql);
-
-							$vSql = "Delete from mailboletin where direccion = '$mailEliminar'";
-							$vResultado = mysqli_query($link, $vSql);
-							if($vResultado){
-								$vSql = "commit;";
-								mysqli_query($link, $vSql);
-							}
-							else{
-								$vSql = "rollback;";
-							    mysqli_query($link, $vSql);
-							}
-						
-						$vSql = "SET AUTOCOMMIT=1;";
-						mysqli_query($link, $vSql);
-
-						////////////////////////////////////////////////////////////////////
 						header('Location: adminListaSuscriptos.php');
 					} else {?>
                     	<h1 style="color:#FF0004">Error en el envío de datos</h1>

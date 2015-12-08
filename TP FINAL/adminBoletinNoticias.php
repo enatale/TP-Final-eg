@@ -23,6 +23,7 @@
 				?>	
 				<input type="button" class="btn btn-success" value="Listado de suscriptos" onClick="javascript:window.location ='adminListaSuscriptos.php';" />
                 <br/>
+                <h1>Enviar nuevo boletín de noticias:</h1>
                 <form action="adminEnviarNoticia.php" id="formNoticia" name="formNoticia" method="post">
                 	<label for="asunto">Asunto:</label><input class="form-control" type="text" id="asunto" name="asunto" required  />
                 	<label for="noticia">Escriba la noticia:</label>
