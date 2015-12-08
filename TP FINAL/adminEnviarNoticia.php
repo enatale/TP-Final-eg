@@ -20,17 +20,32 @@
         	<div class="col-md-10 col-centered">
 				<?php
 				if(isset($_SESSION['usuario']) and $_SESSION['usuario']=='administrador'){	
-				?>	
-				<input type="button" class="btn btn-success" value="Listado de suscriptos" onClick="javascript:window.location ='adminListaSuscriptos.php';" />
-                <br/>
-                <form action="adminEnviarNoticia.php" id="formNoticia" name="formNoticia" method="post">
-                	<label for="asunto">Asunto:</label><input class="form-control" type="text" id="asunto" name="asunto" required  />
-                	<label for="noticia">Escriba la noticia:</label>
-                    <textarea class="form-control" id="noticia" name="noticia" cols="20" rows="10" autofocus required></textarea>
-                    <br/>
-                    <input type="submit" value="Enviar" class="btn-block btn btn-success"/>
-                </form>	
-                <?php	
+					if(isset($_POST['noticia'])){
+						$noticia = $_POST['noticia'];
+						$asunto = $_POST['asunto'];
+						include('conexion.inc');
+						$sql = "Select * from mailboletin";
+						$resultado = mysqli_query($link, $sql) or die (mysqli_error($link));
+						$cantidad = mysqli_num_rows($resultado);
+						if($cantidad==0){
+							echo('<h1 style="color:red">No se encontraron suscriptores</h1>');
+						} else {
+							$destinatario= "";
+                            $remitente='From:' .'info@sociedaditaliana.96.lt';
+							while ($fila= mysqli_fetch_array($resultado)){
+								$destinatario.= $fila['direccion'] . ', ';
+							}
+							if(mail($destinatario,$asunto,$noticia,$remitente)){
+								echo('<h1>El boletín de noticias se ha enviado correctamente</h1></br><a href="adminBoletinNoticias.php">Volver</a>');
+							} else {
+								echo('<h1 style="color:red">Error al enviar mail</h1></br><a href="adminBoletinNoticias.php">Vuelva a intentarlo</a>');
+							}
+						}
+						mysqli_free_result($resultado);
+						mysqli_close($link);
+					} else {
+						echo('<h1 style="color:red"> Error en el envío de datos</h1></br><a href="adminBoletinNoticias.php">Vuelva a intentarlo</a>');
+					}
 				} else {
 					echo('<h1 style="color:red"> DEBE ESTAR LOGUEADO COMO ADMINISTRADOR PARA VER ESTA PÁGINA</h1>');
 				}

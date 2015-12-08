@@ -28,20 +28,22 @@
                             $hora=date("H :i:s");
                             $destinatario= $fila['email'];
 		
-                            $remitente='From: '."info@sociedaditaliana.net23.net";
+                            $remitente='From: '."info@sociedaditaliana.96.lt";
                             $cuerpo=" Usted ha solicitado su contraseña. La misma es:\n
 									  $contra
                                     ";
                             $asunto="Contraseña olvidada; Socidad Italiana de Pujato";
 							
                             if(mail($destinatario,$asunto,$cuerpo,$remitente)){
-                  			echo("<h1>Su contraseña ha sido enviada a su correo, por favor revíselo</h1>");}
-							else{}
+                  				echo("<h1>Su contraseña ha sido enviada a su correo, por favor revíselo</h1>");
+							}
+							else{
+                  				echo('<h1 style="color:red">Error al enviar e-mail, vuelva a intentarlo.</h1><br/><a href="olvidocontra.php">Volver</a>');
+							}
 							
-							}
-							else{							
+						} else{							
 							echo("<h1> El usuario no existe o no coincide con el e-mail ingresado</h1><br/><a href='olvidocontra.php'>Volver</a>");
-							}
+						}
 					mysqli_free_result($resultado);
 					mysqli_close($link);
 					}

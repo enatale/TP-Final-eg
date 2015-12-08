@@ -16,7 +16,7 @@
 				 <?php
                             $fecha=date("d-m-Y");
                             $hora=date("H :i:s");
-                            $destinatario= "info@sociedaditaliana.net23.net";
+                            $destinatario= "info@sociedaditaliana.96.lt";
                             $remitente='From:' .$_POST['remitente'];
                             $cuerpo="
                                     \n
