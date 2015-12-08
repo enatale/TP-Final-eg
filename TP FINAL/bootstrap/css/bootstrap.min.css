@@ -48,6 +48,6 @@ text-align:center;
 height:auto;
 }
 
-#segundaBarra{
-	margin-top:50px;
+a:visited { 
+    color: #A40070;
 }
